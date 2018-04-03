@@ -64,9 +64,9 @@ namespace Capa_Datos
             return usuario;
         }
 
-        public bool Consulta_Login(TextBox txt1, TextBox txt2)
+        public bool Consulta_Login(string ced,string contr)
         {
-            bool bandera = false;
+            bool bandera=false;
             try
             {
                 doc.Load(rutaXml);
@@ -76,7 +76,7 @@ namespace Capa_Datos
                 {
                     user = listaU.Item(i);
 
-                    if ((user.SelectSingleNode("cedula").InnerText == txt1.Text) && (user.SelectSingleNode("contraseña").InnerText == txt2.Text))
+                    if ((user.SelectSingleNode("cedula").InnerText == ced) && (user.SelectSingleNode("contraseña").InnerText ==contr))
                     {
                         bandera = true;
                     }

@@ -36,7 +36,7 @@ namespace Capa_Presentacion
             }
             else
             {
-                //xml._crearXml("Usuarios.xml", "Usuarios");
+                xml._crearXml("Usuarios.xml", "Usuarios");
                 xml._Añadir_Usuario(txtCedula.Text, txtNombre.Text, Convert.ToInt16(txtEdad.Text), comboSexo.SelectedItem.ToString(), txtContraseña.Text);
                 MessageBox.Show("El Registro se realizo con Exito!!");
                 txtCedula.Text = "";
@@ -48,12 +48,12 @@ namespace Capa_Presentacion
 
         private void btnIngresar_Click(object sender, EventArgs e)
         {
-            if (xml.Consulta_Login(txtCedula, txtContraseña))
+            if (xml.Consulta_Login(txtCedulaLogin.Text, txtContraseñaLogin.Text))
             {
-                MessageBox.Show("Usuario Registrado en el Sistema");
+                MessageBox.Show("Usuario Registrado en el Sistema......");
             }
             else {
-                MessageBox.Show("Usuario no Registrado en el Sistema");
+                MessageBox.Show("Usuario NO Registrado en el Sistema");
             }
         }
 
