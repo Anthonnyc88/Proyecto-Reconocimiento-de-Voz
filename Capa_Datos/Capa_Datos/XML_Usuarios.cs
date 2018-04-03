@@ -24,11 +24,11 @@ namespace Capa_Datos
             doc.Save(ruta);
         }
 
-        public void _Añadir_Usuario(string cedula, string nombre, string contraseña)
+        public void _Añadir_Usuario(string cedula, string nombre,int edad,string sexo, string contraseña)
         {
             doc.Load(rutaXml);
 
-            XmlNode pelicula = _Crear_Usuario(cedula, nombre, contraseña);
+            XmlNode pelicula = _Crear_Usuario(cedula, nombre,edad,sexo, contraseña);
 
             XmlNode nodoRaiz = doc.DocumentElement;
 
@@ -37,23 +37,31 @@ namespace Capa_Datos
             doc.Save(rutaXml);
         }
 
-        private XmlNode _Crear_Usuario(string cedula, string nombre, string contraseña)
+        private XmlNode _Crear_Usuario(string cedula, string nombre,int edad,string sexo, string contraseña)
         {
-            XmlNode pelicula = doc.CreateElement("usuario");
+            XmlNode usuario = doc.CreateElement("usuario");
 
             XmlElement xcedula = doc.CreateElement("cedula");
             xcedula.InnerText = cedula;
-            pelicula.AppendChild(xcedula);
+            usuario.AppendChild(xcedula);
 
             XmlElement xnombre = doc.CreateElement("nombre");
             xnombre.InnerText = nombre;
-            pelicula.AppendChild(xnombre);
+            usuario.AppendChild(xnombre);
+
+            XmlElement xedad = doc.CreateElement("edad");
+            xedad.InnerText = nombre;
+            usuario.AppendChild(xedad);
+
+            XmlElement xsexo = doc.CreateElement("sexo");
+            xedad.InnerText = sexo;
+            usuario.AppendChild(xsexo);
 
             XmlElement xcontraseña = doc.CreateElement("contraseña");
             xcontraseña.InnerText = contraseña;
-            pelicula.AppendChild(xcontraseña);
+            usuario.AppendChild(xcontraseña);
 
-            return pelicula;
+            return usuario;
         }
 
         public bool Consulta_Login(TextBox txt1, TextBox txt2)
