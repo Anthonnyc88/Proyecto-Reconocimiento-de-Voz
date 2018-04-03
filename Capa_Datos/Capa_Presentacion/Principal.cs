@@ -36,7 +36,7 @@ namespace Capa_Presentacion
             }
             else
             {
-                xml._crearXml("Usuarios.xml", "Usuarios");
+                //xml._crearXml("Usuarios.xml", "Usuarios");
                 xml._Añadir_Usuario(txtCedula.Text, txtNombre.Text, Convert.ToInt16(txtEdad.Text), comboSexo.SelectedItem.ToString(), txtContraseña.Text);
                 MessageBox.Show("El Registro se realizo con Exito!!");
                 txtCedula.Text = "";
