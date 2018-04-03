@@ -30,17 +30,20 @@ namespace Capa_Presentacion
         private void button1_Click(object sender, EventArgs e)
         {
             //falta la validacion de que se llenes todos los datos
-            if (txtCedula.Text.Length != 0 || txtNombre.Text.Length != 0 || txtEdad.Text.Length != 0 || txtContraseña.Text.Length != 0)
+            if (txtCedula.Text.Length == 0 || txtNombre.Text.Length == 0 || txtEdad.Text.Length == 0 || txtContraseña.Text.Length == 0)
+            {
+                MessageBox.Show("Debe de Llenar todos los campos");
+            }
+            else
             {
                 //xml._crearXml("Usuarios.xml", "Usuarios");
-                xml._Añadir_Usuario(txtCedula.Text,txtNombre.Text,Convert.ToInt16(txtEdad.Text),comboSexo.SelectedItem.ToString(),txtContraseña.Text);
+                xml._Añadir_Usuario(txtCedula.Text, txtNombre.Text, Convert.ToInt16(txtEdad.Text), comboSexo.SelectedItem.ToString(), txtContraseña.Text);
                 MessageBox.Show("El Registro se realizo con Exito!!");
                 txtCedula.Text = "";
                 txtNombre.Text = "";
                 txtEdad.Text = "";
                 txtContraseña.Text = "";
             }
-            else { MessageBox.Show("Debe de Llenar todos los campos"); }
         }
 
         private void btnIngresar_Click(object sender, EventArgs e)
