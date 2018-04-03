@@ -28,11 +28,11 @@ namespace Capa_Datos
         {
             doc.Load(rutaXml);
 
-            XmlNode pelicula = _Crear_Usuario(cedula, nombre,edad,sexo, contraseña);
+            XmlNode usuario = _Crear_Usuario(cedula, nombre,edad,sexo, contraseña);
 
             XmlNode nodoRaiz = doc.DocumentElement;
 
-            nodoRaiz.InsertAfter(pelicula, nodoRaiz.LastChild);
+            nodoRaiz.InsertAfter(usuario, nodoRaiz.LastChild);
 
             doc.Save(rutaXml);
         }
