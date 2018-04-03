@@ -24,14 +24,15 @@ namespace Capa_Presentacion
         private void btnSalir_Click(object sender, EventArgs e)
         {
             Application.Exit();
-            
+                      
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             //falta la validacion de que se llenes todos los datos
-            if (txtCedula.TextLength != 0 || txtNombre.TextLength != 0 || txtEdad.TextLength != 0 || txtContraseña.TextLength != 0)
+            if (txtCedula.Text.Length != 0 || txtNombre.Text.Length != 0 || txtEdad.Text.Length != 0 || txtContraseña.Text.Length != 0)
             {
+                //xml._crearXml("Usuarios.xml", "Usuarios");
                 xml._Añadir_Usuario(txtCedula.Text,txtNombre.Text,Convert.ToInt16(txtEdad.Text),comboSexo.SelectedItem.ToString(),txtContraseña.Text);
                 MessageBox.Show("El Registro se realizo con Exito!!");
                 txtCedula.Text = "";
@@ -51,6 +52,11 @@ namespace Capa_Presentacion
             else {
                 MessageBox.Show("Usuario no Registrado en el Sistema");
             }
+        }
+
+        private void Principal_Load(object sender, EventArgs e)
+        {
+           
         }
     }
 }
