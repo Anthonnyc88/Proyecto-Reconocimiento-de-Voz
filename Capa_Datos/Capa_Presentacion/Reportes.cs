@@ -10,30 +10,23 @@ using System.Windows.Forms;
 
 namespace Capa_Presentacion
 {
-    public partial class Menu_Admin : Form
+    public partial class Reportes : Form
     {
-        public Menu_Admin()
+        public Reportes()
         {
             InitializeComponent();
             this.CenterToScreen();
         }
 
-        private void Menu_Admin_Load(object sender, EventArgs e)
+        private void Reportes_Load(object sender, EventArgs e)
         {
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void regresarToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Principal v = new Principal();
-            v.Show();
-        }
-
-        private void reportesToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            Reportes v = new Reportes();
+            Menu_Admin v = new Menu_Admin();
             v.Show();
         }
     }
