@@ -89,5 +89,42 @@ namespace Capa_Datos
             }
             return bandera;
         }
+
+        public string Retorna_Nombre(int ced)
+        {
+            string nU = string.Empty;
+            try
+            {
+                doc.Load(rutaXml);
+                XmlNodeList listaU = doc.SelectNodes("Usuarios/usuario");
+                XmlNode user;
+                for (int i = 0; i < listaU.Count; i++)
+                {
+                    user = listaU.Item(i);
+
+                    if (user.SelectSingleNode("cedula").InnerText == ced.ToString())
+                    {
+                        nU = user.SelectSingleNode("nombre").InnerText;
+                    }
+                }
+
+            }
+            catch (Exception error)
+            {
+                MessageBox.Show("Error \n" + error);
+            }
+            return nU;
+        }
+
+        public int Cantidad_Usuarios_Hombres() {
+
+            int cantidadHomb = 0;
+
+
+
+            return cantidadHomb;
+        }
+
+
     }
 }

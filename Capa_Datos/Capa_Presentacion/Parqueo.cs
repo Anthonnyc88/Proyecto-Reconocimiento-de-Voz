@@ -18,7 +18,7 @@ namespace Capa_Presentacion
 
         XML_Usuarios xml_Usuarios = new XML_Usuarios();
         XML_Carros xml_Autos = new XML_Carros();
-
+   
         public Parqueo()
         {
             InitializeComponent();
@@ -27,6 +27,7 @@ namespace Capa_Presentacion
 
         private void Parqueo_Load(object sender, EventArgs e)
         {
+            string nombreUsuario = Principal.nombreUsuario;
             Carro.Visible = false;
             //xml_Autos._crearXml("Automoviles.xml","Automoviles");
             Choices ListaPalabras = new Choices();

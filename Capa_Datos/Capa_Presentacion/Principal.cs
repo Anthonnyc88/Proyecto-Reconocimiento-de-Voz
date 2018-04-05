@@ -16,6 +16,7 @@ namespace Capa_Presentacion
     {
         XML_Usuarios xml = new XML_Usuarios();
         Validaciones validaciones = new Validaciones();
+        public static string nombreUsuario = String.Empty;
 
         public Principal()
         {
@@ -53,6 +54,8 @@ namespace Capa_Presentacion
             if (xml.Consulta_Login(txtCedulaLogin.Text, txtContraseñaLogin.Text))
             {
                 MessageBox.Show("Usuario Registrado en el Sistema......");
+                //MessageBox.Show(xml.Retorna_Nombre(Convert.ToInt16(txtCedulaLogin.Text)));
+                nombreUsuario = xml.Retorna_Nombre(Convert.ToInt16(txtCedulaLogin.Text));
                 this.Hide();
                 Parqueo conectar = new Parqueo();
                 conectar.Show();
