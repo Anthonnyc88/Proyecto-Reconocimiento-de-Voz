@@ -32,6 +32,8 @@ namespace Capa_Presentacion
             try
             {
                 escucha.SetInputToDefaultAudioDevice();
+
+                //Capta las palabras
                 escucha.LoadGrammar(new DictationGrammar());
                 escucha.SpeechRecognized += new EventHandler<SpeechRecognizedEventArgs>(Lector);
                 escucha.RecognizeAsync(RecognizeMode.Multiple);
@@ -50,7 +52,7 @@ namespace Capa_Presentacion
         {
             foreach (RecognizedWordUnit palabra in e.Result.Words)
             {
-                label1.Text = palabra.Text;
+                label2.Text = palabra.Text;
 
                 if (palabra.Text.Equals("Izquierda"))
                 {

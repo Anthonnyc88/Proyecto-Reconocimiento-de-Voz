@@ -51,6 +51,9 @@ namespace Capa_Presentacion
             if (xml.Consulta_Login(txtCedulaLogin.Text, txtContraseñaLogin.Text))
             {
                 MessageBox.Show("Usuario Registrado en el Sistema......");
+                this.Hide();
+                Parqueo conectar = new Parqueo();
+                conectar.Show();
             }
             else {
                 MessageBox.Show("Usuario NO Registrado en el Sistema");
@@ -60,6 +63,14 @@ namespace Capa_Presentacion
         private void Principal_Load(object sender, EventArgs e)
         {
            
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Parqueo conectar = new Parqueo();
+            conectar.Show();
+
         }
     }
 }
