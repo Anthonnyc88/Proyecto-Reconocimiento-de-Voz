@@ -24,11 +24,11 @@ namespace Capa_Datos
             doc.Save(ruta);
         }
 
-        public void _Añadir_Automovil(string placa, string f_p)
+        public void _Añadir_Automovil(string placa, string f_p,string nombre_conductor)
         {
             doc.Load(rutaXml);
 
-            XmlNode auto = _Crear_Automovil(placa, f_p);
+            XmlNode auto = _Crear_Automovil(placa, f_p,nombre_conductor);
 
             XmlNode nodoRaiz = doc.DocumentElement;
 
@@ -37,7 +37,7 @@ namespace Capa_Datos
             doc.Save(rutaXml);
         }
 
-        private XmlNode _Crear_Automovil(string placa, string fecha_parqueo)
+        private XmlNode _Crear_Automovil(string placa, string fecha_parqueo,string nc)
         {
             XmlNode auto = doc.CreateElement("automovil");
 
@@ -48,7 +48,11 @@ namespace Capa_Datos
             XmlElement xfecha_parqueo = doc.CreateElement("fecha_parqueo");
             xfecha_parqueo.InnerText = fecha_parqueo;
             auto.AppendChild(xfecha_parqueo);
-            
+
+            XmlElement xnombre_conductor = doc.CreateElement("nombre_conductor");
+            xnombre_conductor.InnerText = nc;
+            auto.AppendChild(xnombre_conductor);
+
             return auto;
         }
     }

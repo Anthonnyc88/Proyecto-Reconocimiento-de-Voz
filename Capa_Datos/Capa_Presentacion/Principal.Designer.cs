@@ -43,7 +43,7 @@
             this.button1 = new System.Windows.Forms.Button();
             this.comboSexo = new System.Windows.Forms.ComboBox();
             this.txtContraseña = new System.Windows.Forms.TextBox();
-            this.txtEdad = new System.Windows.Forms.TextBox();
+            this.txtEdadX = new System.Windows.Forms.TextBox();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.txtCedula = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
@@ -164,7 +164,7 @@
             this.tabPage2.Controls.Add(this.button1);
             this.tabPage2.Controls.Add(this.comboSexo);
             this.tabPage2.Controls.Add(this.txtContraseña);
-            this.tabPage2.Controls.Add(this.txtEdad);
+            this.tabPage2.Controls.Add(this.txtEdadX);
             this.tabPage2.Controls.Add(this.txtNombre);
             this.tabPage2.Controls.Add(this.txtCedula);
             this.tabPage2.Controls.Add(this.label7);
@@ -179,6 +179,7 @@
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Registro";
             this.tabPage2.UseVisualStyleBackColor = true;
+            this.tabPage2.Click += new System.EventHandler(this.tabPage2_Click);
             // 
             // label9
             // 
@@ -219,13 +220,13 @@
             this.txtContraseña.Size = new System.Drawing.Size(188, 20);
             this.txtContraseña.TabIndex = 8;
             // 
-            // txtEdad
+            // txtEdadX
             // 
-            this.txtEdad.Location = new System.Drawing.Point(298, 180);
-            this.txtEdad.Name = "txtEdad";
-            this.txtEdad.Size = new System.Drawing.Size(190, 20);
-            this.txtEdad.TabIndex = 7;
-            this.txtEdad.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtEdad_KeyPress);
+            this.txtEdadX.Location = new System.Drawing.Point(298, 180);
+            this.txtEdadX.Name = "txtEdadX";
+            this.txtEdadX.Size = new System.Drawing.Size(190, 20);
+            this.txtEdadX.TabIndex = 7;
+            this.txtEdadX.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtEdad_KeyPress);
             // 
             // txtNombre
             // 
@@ -325,7 +326,7 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.ComboBox comboSexo;
         private System.Windows.Forms.TextBox txtContraseña;
-        private System.Windows.Forms.TextBox txtEdad;
+        private System.Windows.Forms.TextBox txtEdadX;
         private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.TextBox txtCedula;
         private System.Windows.Forms.Label label8;

@@ -24,11 +24,11 @@ namespace Capa_Datos
             doc.Save(ruta);
         }
 
-        public void _Añadir_Usuario(string cedula, string nombre,int edad,string sexo, string contraseña)
+        public void _Añadir_Usuario(string cedula, string nombre,string edad,string sexo, string contraseña,string tU)
         {
             doc.Load(rutaXml);
 
-            XmlNode usuario = _Crear_Usuario(cedula, nombre,edad,sexo, contraseña);
+            XmlNode usuario = _Crear_Usuario(cedula, nombre,edad,sexo, contraseña,tU);
 
             XmlNode nodoRaiz = doc.DocumentElement;
 
@@ -37,7 +37,7 @@ namespace Capa_Datos
             doc.Save(rutaXml);
         }
 
-        private XmlNode _Crear_Usuario(string cedula, string nombre,int edad,string sexo, string contraseña)
+        private XmlNode _Crear_Usuario(string cedula, string nombre,string edad,string sexo, string contraseña,string tU)
         {
             XmlNode usuario = doc.CreateElement("usuario");
 
@@ -50,23 +50,27 @@ namespace Capa_Datos
             usuario.AppendChild(xnombre);
 
             XmlElement xedad = doc.CreateElement("edad");
-            xedad.InnerText = nombre;
+            xedad.InnerText = edad;
             usuario.AppendChild(xedad);
 
             XmlElement xsexo = doc.CreateElement("sexo");
-            xedad.InnerText = sexo;
+            xsexo.InnerText = sexo;
             usuario.AppendChild(xsexo);
 
             XmlElement xcontraseña = doc.CreateElement("contraseña");
             xcontraseña.InnerText = contraseña;
             usuario.AppendChild(xcontraseña);
 
+            XmlElement xtipo_usuario = doc.CreateElement("tipo_usuario");
+            xtipo_usuario.InnerText = tU;
+            usuario.AppendChild(xtipo_usuario);
+
             return usuario;
         }
 
-        public bool Consulta_Login(string ced,string contr)
+        public string Consulta_Login(string ced,string contr)
         {
-            bool bandera=false;
+            string bandera=String.Empty;
             try
             {
                 doc.Load(rutaXml);
@@ -78,7 +82,7 @@ namespace Capa_Datos
 
                     if ((user.SelectSingleNode("cedula").InnerText == ced) && (user.SelectSingleNode("contraseña").InnerText ==contr))
                     {
-                        bandera = true;
+                        bandera = user.SelectSingleNode("tipo_usuario").InnerText;
                     }
                 }
 

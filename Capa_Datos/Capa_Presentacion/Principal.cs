@@ -33,25 +33,28 @@ namespace Capa_Presentacion
         private void button1_Click(object sender, EventArgs e)
         {
             //falta la validacion de que se llenes todos los datos
-            if (txtCedula.Text.Length == 0 || txtNombre.Text.Length == 0 || txtEdad.Text.Length == 0 || txtContraseña.Text.Length == 0)
+            if (txtCedula.Text.Length == 0 || txtNombre.Text.Length == 0 || txtEdadX.Text.Length == 0 || txtContraseña.Text.Length == 0|| comboSexo.SelectedItem.ToString().Length==0)
             {
                 MessageBox.Show("Debe de Llenar todos los campos");
             }
             else
             {
                 //xml._crearXml("Usuarios.xml", "Usuarios");
-                xml._Añadir_Usuario(txtCedula.Text, txtNombre.Text, Convert.ToInt16(txtEdad.Text), comboSexo.SelectedItem.ToString(), txtContraseña.Text);
+                //string tU = "Administrador";
+                string tU = "Cliente";
+                MessageBox.Show(txtCedula.Text + "\n"+ txtEdadX.Text+"\n"+ comboSexo.SelectedItem.ToString() + "\n"+ txtContraseña.Text+"\n"+tU);
+                xml._Añadir_Usuario(txtCedula.Text, txtNombre.Text, txtEdadX.Text, comboSexo.SelectedItem.ToString(), txtContraseña.Text,tU);              
                 MessageBox.Show("El Registro se realizo con Exito!!");
                 txtCedula.Text = "";
                 txtNombre.Text = "";
-                txtEdad.Text = "";
+                txtEdadX.Text = "";
                 txtContraseña.Text = "";
             }
         }
 
         private void btnIngresar_Click(object sender, EventArgs e)
         {
-            if (xml.Consulta_Login(txtCedulaLogin.Text, txtContraseñaLogin.Text))
+            if (xml.Consulta_Login(txtCedulaLogin.Text, txtContraseñaLogin.Text) == "Cliente")
             {
                 MessageBox.Show("Usuario Registrado en el Sistema......");
                 //MessageBox.Show(xml.Retorna_Nombre(Convert.ToInt16(txtCedulaLogin.Text)));
@@ -60,6 +63,13 @@ namespace Capa_Presentacion
                 Parqueo conectar = new Parqueo();
                 conectar.Show();
             }
+            else if (xml.Consulta_Login(txtCedulaLogin.Text, txtContraseñaLogin.Text) == "Administrador") {
+
+                MessageBox.Show("Usuario ADMINISTRADOR Registrado en el Sistema......");
+                this.Hide();
+                Menu_Admin mA = new Menu_Admin();
+                mA.Show();
+            }
             else {
                 MessageBox.Show("Usuario NO Registrado en el Sistema");
             }
@@ -67,7 +77,7 @@ namespace Capa_Presentacion
 
         private void Principal_Load(object sender, EventArgs e)
         {
-           
+            //xml._crearXml("Usuarios.xml","Usuarios");
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -96,6 +106,11 @@ namespace Capa_Presentacion
         private void txtEdad_KeyPress(object sender, KeyPressEventArgs e)
         {
             validaciones.validarSoloNumeros(e);
+        }
+
+        private void tabPage2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
