@@ -8,13 +8,16 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Speech.Recognition;
-
+using Capa_Datos;
 namespace Capa_Presentacion
 {
     public partial class Parqueo : Form
     {
 
         private SpeechRecognitionEngine escucha = new SpeechRecognitionEngine();
+
+        XML_Usuarios xml_Usuarios = new XML_Usuarios();
+        XML_Carros xml_Autos = new XML_Carros();
 
         public Parqueo()
         {
@@ -25,7 +28,7 @@ namespace Capa_Presentacion
         private void Parqueo_Load(object sender, EventArgs e)
         {
             Carro.Visible = false;
-
+            //xml_Autos._crearXml("Automoviles.xml","Automoviles");
             Choices ListaPalabras = new Choices();
             ListaPalabras.Add(new string[] { "auto", "carro", "salir" });
             Grammar gramatica = new Grammar(new GrammarBuilder(ListaPalabras));
