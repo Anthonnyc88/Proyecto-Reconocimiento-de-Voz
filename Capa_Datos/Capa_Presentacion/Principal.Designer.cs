@@ -30,6 +30,7 @@
         {
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.button2 = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
             this.btnSalir = new System.Windows.Forms.Button();
             this.btnIngresar = new System.Windows.Forms.Button();
@@ -42,7 +43,7 @@
             this.button1 = new System.Windows.Forms.Button();
             this.comboSexo = new System.Windows.Forms.ComboBox();
             this.txtContraseña = new System.Windows.Forms.TextBox();
-            this.txtEdad = new System.Windows.Forms.TextBox();
+            this.txtEdadX = new System.Windows.Forms.TextBox();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.txtCedula = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
@@ -50,7 +51,6 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -83,6 +83,16 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Login";
             this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(648, 46);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.TabIndex = 7;
+            this.button2.Text = "Probar";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // label8
             // 
@@ -128,6 +138,7 @@
             this.txtCedulaLogin.Name = "txtCedulaLogin";
             this.txtCedulaLogin.Size = new System.Drawing.Size(148, 20);
             this.txtCedulaLogin.TabIndex = 2;
+            this.txtCedulaLogin.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCedulaLogin_KeyPress);
             // 
             // label2
             // 
@@ -153,7 +164,7 @@
             this.tabPage2.Controls.Add(this.button1);
             this.tabPage2.Controls.Add(this.comboSexo);
             this.tabPage2.Controls.Add(this.txtContraseña);
-            this.tabPage2.Controls.Add(this.txtEdad);
+            this.tabPage2.Controls.Add(this.txtEdadX);
             this.tabPage2.Controls.Add(this.txtNombre);
             this.tabPage2.Controls.Add(this.txtCedula);
             this.tabPage2.Controls.Add(this.label7);
@@ -168,6 +179,7 @@
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Registro";
             this.tabPage2.UseVisualStyleBackColor = true;
+            this.tabPage2.Click += new System.EventHandler(this.tabPage2_Click);
             // 
             // label9
             // 
@@ -208,12 +220,13 @@
             this.txtContraseña.Size = new System.Drawing.Size(188, 20);
             this.txtContraseña.TabIndex = 8;
             // 
-            // txtEdad
+            // txtEdadX
             // 
-            this.txtEdad.Location = new System.Drawing.Point(298, 180);
-            this.txtEdad.Name = "txtEdad";
-            this.txtEdad.Size = new System.Drawing.Size(190, 20);
-            this.txtEdad.TabIndex = 7;
+            this.txtEdadX.Location = new System.Drawing.Point(298, 180);
+            this.txtEdadX.Name = "txtEdadX";
+            this.txtEdadX.Size = new System.Drawing.Size(190, 20);
+            this.txtEdadX.TabIndex = 7;
+            this.txtEdadX.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtEdad_KeyPress);
             // 
             // txtNombre
             // 
@@ -221,6 +234,7 @@
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(190, 20);
             this.txtNombre.TabIndex = 6;
+            this.txtNombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNombre_KeyPress);
             // 
             // txtCedula
             // 
@@ -228,6 +242,7 @@
             this.txtCedula.Name = "txtCedula";
             this.txtCedula.Size = new System.Drawing.Size(190, 20);
             this.txtCedula.TabIndex = 5;
+            this.txtCedula.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCedula_KeyPress);
             // 
             // label7
             // 
@@ -274,16 +289,6 @@
             this.label3.TabIndex = 0;
             this.label3.Text = "Cedula:";
             // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(648, 46);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 7;
-            this.button2.Text = "Probar";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
             // Principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -321,7 +326,7 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.ComboBox comboSexo;
         private System.Windows.Forms.TextBox txtContraseña;
-        private System.Windows.Forms.TextBox txtEdad;
+        private System.Windows.Forms.TextBox txtEdadX;
         private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.TextBox txtCedula;
         private System.Windows.Forms.Label label8;

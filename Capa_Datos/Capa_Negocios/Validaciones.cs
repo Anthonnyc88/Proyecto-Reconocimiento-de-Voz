@@ -7,7 +7,7 @@ using System.Windows.Forms;
 
 namespace Capa_Negocios
 {
-    class Validaciones
+    public class Validaciones
     {
         /// <summary>
         /// Metodo que valida que solo se introduzcan letras
