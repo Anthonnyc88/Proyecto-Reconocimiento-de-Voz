@@ -15,9 +15,11 @@ namespace Capa_Presentacion
     {
 
         private SpeechRecognitionEngine escucha = new SpeechRecognitionEngine();
+
         public Parqueo()
         {
             InitializeComponent();
+            this.CenterToScreen();
         }
 
         private void Parqueo_Load(object sender, EventArgs e)
