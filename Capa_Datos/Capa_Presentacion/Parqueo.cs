@@ -22,6 +22,45 @@ namespace Capa_Presentacion
 
         private void Parqueo_Load(object sender, EventArgs e)
         {
+            Carro.Visible = false;
+
+            Choices ListaPalabras = new Choices();
+            ListaPalabras.Add(new string[] { "auto", "carro", "salir" });
+            Grammar gramatica = new Grammar(new GrammarBuilder(ListaPalabras));
+
+            try
+            {
+
+                escucha.SetInputToDefaultAudioDevice();
+                //Capta las palabras
+                escucha.LoadGrammar(new DictationGrammar());
+                escucha.SpeechRecognized += Reconocimiento;
+                escucha.RecognizeAsync(RecognizeMode.Multiple);
+
+            }
+            catch(Exception)
+            {
+                throw;
+
+            }
+
+        }
+
+        public void Reconocimiento(object sender, SpeechRecognizedEventArgs e)
+        {
+            if (e.Result.Text.Equals("auto"))
+            {
+                Carro.Visible = true;
+            }
+            else if (e.Result.Text.Equals("carro"))
+            {
+                Carro.Visible = true;
+            }
+            else if (e.Result.Text.Equals("salir"))
+            {
+                Application.Exit();
+            }
+
 
         }
 
@@ -54,20 +93,20 @@ namespace Capa_Presentacion
             {
                 label2.Text = palabra.Text;
 
-                if (palabra.Text.Equals("Izquierda"))
+                if (palabra.Text.Equals("izquierda"))
                 {
                     Carro.Location = new Point(Carro.Location.X - 20, Carro.Location.Y);
                 }
-                else if (palabra.Text.Equals("Derecha")) {
+                else if (palabra.Text.Equals("derecha")) {
                     Carro.Location = new Point(Carro.Location.X + 20, Carro.Location.Y);
 
                 }
-                else if (palabra.Text.Equals("Arriba"))
+                else if (palabra.Text.Equals("arriba"))
                 {
                     Carro.Location = new Point(Carro.Location.X , Carro.Location.Y -20);
 
                 }
-                else if (palabra.Text.Equals("Abajo"))
+                else if (palabra.Text.Equals("abajo"))
                 {
                     Carro.Location = new Point(Carro.Location.X, Carro.Location.Y + 20);
 
