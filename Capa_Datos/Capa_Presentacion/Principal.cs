@@ -8,12 +8,14 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Capa_Datos;
+using Capa_Negocios;
 
 namespace Capa_Presentacion
 {
     public partial class Principal : Form
     {
         XML_Usuarios xml = new XML_Usuarios();
+        Validaciones validaciones = new Validaciones();
 
         public Principal()
         {
@@ -71,6 +73,26 @@ namespace Capa_Presentacion
             Parqueo conectar = new Parqueo();
             conectar.Show();
 
+        }
+
+        private void txtCedulaLogin_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            validaciones.validarSoloNumeros(e);
+        }
+
+        private void txtCedula_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            validaciones.validarSoloNumeros(e);
+        }
+
+        private void txtNombre_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            validaciones.validarSoloLetras(e);
+        }
+
+        private void txtEdad_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            validaciones.validarSoloNumeros(e);
         }
     }
 }
