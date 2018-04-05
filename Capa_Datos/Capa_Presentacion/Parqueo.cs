@@ -58,6 +58,20 @@ namespace Capa_Presentacion
                 {
                     Carro.Location = new Point(Carro.Location.X - 20, Carro.Location.Y);
                 }
+                else if (palabra.Text.Equals("Derecha")) {
+                    Carro.Location = new Point(Carro.Location.X + 20, Carro.Location.Y);
+
+                }
+                else if (palabra.Text.Equals("Arriba"))
+                {
+                    Carro.Location = new Point(Carro.Location.X , Carro.Location.Y -20);
+
+                }
+                else if (palabra.Text.Equals("Abajo"))
+                {
+                    Carro.Location = new Point(Carro.Location.X, Carro.Location.Y + 20);
+
+                }
 
             }
         }
