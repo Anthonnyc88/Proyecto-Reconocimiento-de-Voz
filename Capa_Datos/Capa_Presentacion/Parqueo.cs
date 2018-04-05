@@ -22,28 +22,9 @@ namespace Capa_Presentacion
 
         private void Parqueo_Load(object sender, EventArgs e)
         {
+
             Carro.Visible = false;
-
-            Choices ListaPalabras = new Choices();
-            ListaPalabras.Add(new string[] { "auto", "carro", "salir" });
-            Grammar gramatica = new Grammar(new GrammarBuilder(ListaPalabras));
-
-            try
-            {
-
-                escucha.SetInputToDefaultAudioDevice();
-                //Capta las palabras
-                escucha.LoadGrammar(new DictationGrammar());
-                escucha.SpeechRecognized += Reconocimiento;
-                escucha.RecognizeAsync(RecognizeMode.Multiple);
-
-            }
-            catch(Exception)
-            {
-                throw;
-
-            }
-
+            
         }
 
         public void Reconocimiento(object sender, SpeechRecognizedEventArgs e)
@@ -68,6 +49,7 @@ namespace Capa_Presentacion
         {
 
             label1.Visible = false;
+            Carro.Visible = true;
             try
             {
                 escucha.SetInputToDefaultAudioDevice();
@@ -76,7 +58,6 @@ namespace Capa_Presentacion
                 escucha.LoadGrammar(new DictationGrammar());
                 escucha.SpeechRecognized += new EventHandler<SpeechRecognizedEventArgs>(Lector);
                 escucha.RecognizeAsync(RecognizeMode.Multiple);
-
 
 
             }
