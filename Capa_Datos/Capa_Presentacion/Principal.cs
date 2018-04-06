@@ -39,10 +39,8 @@ namespace Capa_Presentacion
             }
             else
             {
-                //xml._crearXml("Usuarios.xml", "Usuarios");
                 //string tU = "Administrador";
-                string tU = "Cliente";
-                MessageBox.Show(txtCedula.Text + "\n"+ txtEdadX.Text+"\n"+ comboSexo.SelectedItem.ToString() + "\n"+ txtContraseña.Text+"\n"+tU);
+                string tU = "Cliente";            
                 xml._Añadir_Usuario(txtCedula.Text, txtNombre.Text, txtEdadX.Text, comboSexo.SelectedItem.ToString(), txtContraseña.Text,tU);              
                 MessageBox.Show("El Registro se realizo con Exito!!");
                 txtCedula.Text = "";
@@ -56,8 +54,7 @@ namespace Capa_Presentacion
         {
             if (xml.Consulta_Login(txtCedulaLogin.Text, txtContraseñaLogin.Text) == "Cliente")
             {
-                MessageBox.Show("Usuario Registrado en el Sistema......");
-                //MessageBox.Show(xml.Retorna_Nombre(Convert.ToInt16(txtCedulaLogin.Text)));
+
                 nombreUsuario = xml.Retorna_Nombre(Convert.ToInt16(txtCedulaLogin.Text));
                 this.Hide();
                 Parqueo conectar = new Parqueo();
@@ -65,7 +62,6 @@ namespace Capa_Presentacion
             }
             else if (xml.Consulta_Login(txtCedulaLogin.Text, txtContraseñaLogin.Text) == "Administrador") {
 
-                MessageBox.Show("Usuario ADMINISTRADOR Registrado en el Sistema......");
                 this.Hide();
                 Menu_Admin mA = new Menu_Admin();
                 mA.Show();
@@ -111,6 +107,16 @@ namespace Capa_Presentacion
         private void tabPage2_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Hombres Sistema: "+xml.Cantidad_Usuarios_Hombres());
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Mujeres Sistema: " + xml.Cantidad_Usuarios_Mujeres());
         }
     }
 }

@@ -36,5 +36,10 @@ namespace Capa_Presentacion
             Reportes v = new Reportes();
             v.Show();
         }
+
+        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
     }
 }

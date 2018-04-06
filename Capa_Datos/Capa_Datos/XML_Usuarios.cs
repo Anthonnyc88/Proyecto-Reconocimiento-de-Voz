@@ -124,11 +124,86 @@ namespace Capa_Datos
 
             int cantidadHomb = 0;
 
+            try
+            {
+                doc.Load(rutaXml);
+                XmlNodeList listaU = doc.SelectNodes("Usuarios/usuario");
+                XmlNode user;
+                for (int i = 0; i < listaU.Count; i++)
+                {
+                    user = listaU.Item(i);
 
+                    if (user.SelectSingleNode("sexo").InnerText =="Masculino")
+                    {
+                        cantidadHomb += 1;
+                    }
+                }
+
+            }
+            catch (Exception error)
+            {
+                MessageBox.Show("Error \n" + error);
+            }
 
             return cantidadHomb;
         }
 
+        public int Cantidad_Usuarios_Mujeres()
+        {
 
+            int cantidadMujeres = 0;
+
+            try
+            {
+                doc.Load(rutaXml);
+                XmlNodeList listaU = doc.SelectNodes("Usuarios/usuario");
+                XmlNode user;
+                for (int i = 0; i < listaU.Count; i++)
+                {
+                    user = listaU.Item(i);
+
+                    if (user.SelectSingleNode("sexo").InnerText == "Femenino")
+                    {
+                        cantidadMujeres += 1;
+                    }
+                }
+
+            }
+            catch (Exception error)
+            {
+                MessageBox.Show("Error \n" + error);
+            }
+
+            return cantidadMujeres;
+        }
+
+        public int Cantidad_Usuarios_Mayores()
+        {
+
+            int cantidadPersonasMayores = 0;
+
+            try
+            {
+                doc.Load(rutaXml);
+                XmlNodeList listaU = doc.SelectNodes("Usuarios/usuario");
+                XmlNode user;
+                for (int i = 0; i < listaU.Count; i++)
+                {
+                    user = listaU.Item(i);
+
+                    if (Convert.ToInt16(user.SelectSingleNode("edad").InnerText)>=20)
+                    {
+                        cantidadPersonasMayores += 1;
+                    }
+                }
+
+            }
+            catch (Exception error)
+            {
+                MessageBox.Show("Error \n" + error);
+            }
+
+            return cantidadPersonasMayores;
+        }
     }
 }
