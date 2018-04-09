@@ -22,8 +22,7 @@ namespace Capa_Presentacion
 
         private void Parqueo_Load(object sender, EventArgs e)
         {
-
-            Carro.Visible = false;
+            Carro.Visible = true;
             
         }
 
@@ -48,7 +47,7 @@ namespace Capa_Presentacion
         private void btnParqueo_Click(object sender, EventArgs e)
         {
 
-            label1.Visible = false;
+           
             Carro.Visible = true;
             try
             {

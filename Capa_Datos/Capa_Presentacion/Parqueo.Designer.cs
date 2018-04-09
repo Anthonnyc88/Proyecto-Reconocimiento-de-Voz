@@ -29,23 +29,13 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Parqueo));
-            this.label1 = new System.Windows.Forms.Label();
             this.btnParqueo = new System.Windows.Forms.Button();
             this.Carro = new System.Windows.Forms.PictureBox();
             this.palabra = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.btnPrueba = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.Carro)).BeginInit();
             this.SuspendLayout();
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 72F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(253, 188);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(406, 108);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Parqueo";
             // 
             // btnParqueo
             // 
@@ -60,7 +50,7 @@
             // Carro
             // 
             this.Carro.Image = ((System.Drawing.Image)(resources.GetObject("Carro.Image")));
-            this.Carro.Location = new System.Drawing.Point(393, 188);
+            this.Carro.Location = new System.Drawing.Point(390, 63);
             this.Carro.Name = "Carro";
             this.Carro.Size = new System.Drawing.Size(131, 93);
             this.Carro.TabIndex = 2;
@@ -83,16 +73,27 @@
             this.label2.Size = new System.Drawing.Size(0, 13);
             this.label2.TabIndex = 4;
             // 
+            // btnPrueba
+            // 
+            this.btnPrueba.BackColor = System.Drawing.SystemColors.GrayText;
+            this.btnPrueba.Location = new System.Drawing.Point(4, 227);
+            this.btnPrueba.Name = "btnPrueba";
+            this.btnPrueba.Size = new System.Drawing.Size(243, 134);
+            this.btnPrueba.TabIndex = 5;
+            this.btnPrueba.Text = "Parqueo 1";
+            this.btnPrueba.UseVisualStyleBackColor = false;
+            // 
             // Parqueo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.DarkTurquoise;
             this.ClientSize = new System.Drawing.Size(896, 533);
+            this.Controls.Add(this.btnPrueba);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.palabra);
             this.Controls.Add(this.Carro);
             this.Controls.Add(this.btnParqueo);
-            this.Controls.Add(this.label1);
             this.Name = "Parqueo";
             this.Text = "Parqueo";
             this.Load += new System.EventHandler(this.Parqueo_Load);
@@ -103,11 +104,10 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnParqueo;
         private System.Windows.Forms.PictureBox Carro;
         private System.Windows.Forms.Label palabra;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button btnPrueba;
     }
 }
