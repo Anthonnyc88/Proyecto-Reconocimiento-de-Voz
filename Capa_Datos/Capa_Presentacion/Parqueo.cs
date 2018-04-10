@@ -80,6 +80,11 @@ namespace Capa_Presentacion
                     Carrito.Location = new Point(Carrito.Location.X - 20, Carrito.Location.Y);
                     Carrito2.Location = new Point(Carrito2.Location.X - 20, Carrito2.Location.Y);
                 }
+                else if  (palabra.Text.Equals("siniestra"))
+                {
+                    Carrito.Location = new Point(Carrito.Location.X - 20, Carrito.Location.Y);
+                    Carrito2.Location = new Point(Carrito2.Location.X - 20, Carrito2.Location.Y);
+                }
                 else if (palabra.Text.Equals("derecha")) {
                     Carrito.Location = new Point(Carrito.Location.X + 20, Carrito.Location.Y);
                     Carrito2.Location = new Point(Carrito2.Location.X + 20, Carrito2.Location.Y);
@@ -89,9 +94,21 @@ namespace Capa_Presentacion
                 {
                     Carrito.Location = new Point(Carrito.Location.X , Carrito.Location.Y -20);
                     Carrito2.Location = new Point(Carrito2.Location.X, Carrito2.Location.Y - 20);
+                }
+
+                else if (palabra.Text.Equals("subir"))
+                {
+                    Carrito.Location = new Point(Carrito.Location.X, Carrito.Location.Y - 20);
+                    Carrito2.Location = new Point(Carrito2.Location.X, Carrito2.Location.Y - 20);
 
                 }
                 else if (palabra.Text.Equals("abajo"))
+                {
+                    Carrito.Location = new Point(Carrito.Location.X, Carrito.Location.Y + 20);
+                    Carrito2.Location = new Point(Carrito2.Location.X, Carrito2.Location.Y + 20);
+                }
+
+                else if (palabra.Text.Equals("bajar"))
                 {
                     Carrito.Location = new Point(Carrito.Location.X, Carrito.Location.Y + 20);
                     Carrito2.Location = new Point(Carrito2.Location.X, Carrito2.Location.Y + 20);
@@ -123,7 +140,7 @@ namespace Capa_Presentacion
 
         private void btnPalabras_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("arriba , abajo , izquierda , derecha , negro , amarillo", "Lista de Palabras de muevelo con la voz", MessageBoxButtons.OKCancel);
+            MessageBox.Show("arriba , subir , abajo , bajar , izquierda , siniestra, derecha , negro , amarillo", "Lista de Palabras de muevelo con la voz", MessageBoxButtons.OKCancel);
         }
     }
 
