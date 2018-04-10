@@ -22,7 +22,8 @@ namespace Capa_Presentacion
 
         private void Parqueo_Load(object sender, EventArgs e)
         {
-            Carro.Visible = true;
+            Carrito.Visible = true;
+            Carrito.Visible = true;
             
         }
 
@@ -30,11 +31,11 @@ namespace Capa_Presentacion
         {
             if (e.Result.Text.Equals("auto"))
             {
-                Carro.Visible = true;
+                Carrito.Visible = true;
             }
             else if (e.Result.Text.Equals("carro"))
             {
-                Carro.Visible = true;
+                Carrito2.Visible = true;
             }
             else if (e.Result.Text.Equals("salir"))
             {
@@ -48,7 +49,7 @@ namespace Capa_Presentacion
         {
 
            
-            Carro.Visible = true;
+            Carrito.Visible = true;
             try
             {
                 escucha.SetInputToDefaultAudioDevice();
@@ -76,20 +77,24 @@ namespace Capa_Presentacion
 
                 if (palabra.Text.Equals("izquierda"))
                 {
-                    Carro.Location = new Point(Carro.Location.X - 20, Carro.Location.Y);
+                    Carrito.Location = new Point(Carrito.Location.X - 20, Carrito.Location.Y);
+                    Carrito2.Location = new Point(Carrito2.Location.X - 20, Carrito2.Location.Y);
                 }
                 else if (palabra.Text.Equals("derecha")) {
-                    Carro.Location = new Point(Carro.Location.X + 20, Carro.Location.Y);
+                    Carrito.Location = new Point(Carrito.Location.X + 20, Carrito.Location.Y);
+                    Carrito2.Location = new Point(Carrito2.Location.X + 20, Carrito2.Location.Y);
 
                 }
                 else if (palabra.Text.Equals("arriba"))
                 {
-                    Carro.Location = new Point(Carro.Location.X , Carro.Location.Y -20);
+                    Carrito.Location = new Point(Carrito.Location.X , Carrito.Location.Y -20);
+                    Carrito2.Location = new Point(Carrito2.Location.X, Carrito2.Location.Y - 20);
 
                 }
                 else if (palabra.Text.Equals("abajo"))
                 {
-                    Carro.Location = new Point(Carro.Location.X, Carro.Location.Y + 20);
+                    Carrito.Location = new Point(Carrito.Location.X, Carrito.Location.Y + 20);
+                    Carrito2.Location = new Point(Carrito2.Location.X, Carrito2.Location.Y + 20);
 
                 }
 
@@ -118,7 +123,7 @@ namespace Capa_Presentacion
 
         private void btnPalabras_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("arriba , abajo , izquierda , derecha", "Lista de Palabras de muevelo con la voz", MessageBoxButtons.OKCancel);
+            MessageBox.Show("arriba , abajo , izquierda , derecha , negro , amarillo", "Lista de Palabras de muevelo con la voz", MessageBoxButtons.OKCancel);
         }
     }
 
