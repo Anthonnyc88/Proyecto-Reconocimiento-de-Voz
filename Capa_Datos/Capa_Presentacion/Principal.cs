@@ -26,7 +26,15 @@ namespace Capa_Presentacion
 
         private void btnSalir_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+
+            DialogResult opcion;
+            opcion = MessageBox.Show("Realmente desea Salir", "Salir del Programa", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (opcion == DialogResult.Yes)
+            {
+                Application.Exit();
+                Close();
+            }
+           
                       
         }
 

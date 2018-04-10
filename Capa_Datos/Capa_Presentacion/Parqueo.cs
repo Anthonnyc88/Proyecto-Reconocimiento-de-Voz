@@ -57,6 +57,7 @@ namespace Capa_Presentacion
                 escucha.LoadGrammar(new DictationGrammar());
                 escucha.SpeechRecognized += new EventHandler<SpeechRecognizedEventArgs>(Lector);
                 escucha.RecognizeAsync(RecognizeMode.Multiple);
+                escucha.AudioLevelUpdated += Nivel_Audio;
 
 
             }
@@ -95,7 +96,32 @@ namespace Capa_Presentacion
             }
         }
 
+        public void Nivel_Audio( object sender , AudioLevelUpdatedEventArgs e)
+        {
+            int audio = e.AudioLevel;
+            Barrita.Value = audio;
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Principal a = new Principal();
+            a.Show();
+           
+        }
+
+        private void btnPrueba_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnPalabras_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("arriba , abajo , izquierda , derecha", "Lista de Palabras de muevelo con la voz", MessageBoxButtons.OKCancel);
+        }
     }
+
 
 }
 
