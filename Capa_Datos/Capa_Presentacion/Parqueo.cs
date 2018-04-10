@@ -18,6 +18,7 @@ namespace Capa_Presentacion
         public Parqueo()
         {
             InitializeComponent();
+            this.CenterToScreen();
         }
 
         private void Parqueo_Load(object sender, EventArgs e)
