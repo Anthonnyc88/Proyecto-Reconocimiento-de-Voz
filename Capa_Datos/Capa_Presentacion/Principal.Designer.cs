@@ -131,6 +131,7 @@
             this.txtContraseñaLogin.PasswordChar = '*';
             this.txtContraseñaLogin.Size = new System.Drawing.Size(148, 20);
             this.txtContraseñaLogin.TabIndex = 3;
+            this.txtContraseñaLogin.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtContraseñaLogin_KeyPress);
             // 
             // txtCedulaLogin
             // 

@@ -118,5 +118,31 @@ namespace Capa_Presentacion
         {
             MessageBox.Show("Mujeres Sistema: " + xml.Cantidad_Usuarios_Mujeres());
         }
+
+        private void txtContraseñaLogin_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == Convert.ToChar(Keys.Enter))
+            {
+                if (xml.Consulta_Login(txtCedulaLogin.Text, txtContraseñaLogin.Text) == "Cliente")
+                {
+
+                    nombreUsuario = xml.Retorna_Nombre(Convert.ToInt16(txtCedulaLogin.Text));
+                    this.Hide();
+                    Parqueo conectar = new Parqueo();
+                    conectar.Show();
+                }
+                else if (xml.Consulta_Login(txtCedulaLogin.Text, txtContraseñaLogin.Text) == "Administrador")
+                {
+
+                    this.Hide();
+                    Menu_Admin mA = new Menu_Admin();
+                    mA.Show();
+                }
+                else
+                {
+                    MessageBox.Show("Usuario NO Registrado en el Sistema");
+                }
+            }
+        }
     }
 }
