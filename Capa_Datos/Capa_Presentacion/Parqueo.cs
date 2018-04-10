@@ -23,7 +23,7 @@ namespace Capa_Presentacion
         private void Parqueo_Load(object sender, EventArgs e)
         {
             Carrito.Visible = true;
-            Carrito.Visible = true;
+            Carrito2.Visible = true;
             
         }
 
