@@ -60,7 +60,8 @@
             // 
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Location = new System.Drawing.Point(1, 3);
+            this.tabControl1.Font = new System.Drawing.Font("Constantia", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabControl1.Location = new System.Drawing.Point(1, 1);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(779, 499);
@@ -68,6 +69,7 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.BackColor = System.Drawing.Color.DarkGray;
             this.tabPage1.Controls.Add(this.button2);
             this.tabPage1.Controls.Add(this.label8);
             this.tabPage1.Controls.Add(this.btnSalir);
@@ -76,19 +78,18 @@
             this.tabPage1.Controls.Add(this.txtCedulaLogin);
             this.tabPage1.Controls.Add(this.label2);
             this.tabPage1.Controls.Add(this.label1);
-            this.tabPage1.Location = new System.Drawing.Point(4, 22);
+            this.tabPage1.Location = new System.Drawing.Point(4, 27);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(771, 473);
+            this.tabPage1.Size = new System.Drawing.Size(771, 468);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Login";
-            this.tabPage1.UseVisualStyleBackColor = true;
             // 
             // button2
             // 
             this.button2.Location = new System.Drawing.Point(648, 46);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.Size = new System.Drawing.Size(75, 34);
             this.button2.TabIndex = 7;
             this.button2.Text = "Probar";
             this.button2.UseVisualStyleBackColor = true;
@@ -106,9 +107,9 @@
             // 
             // btnSalir
             // 
-            this.btnSalir.Location = new System.Drawing.Point(682, 441);
+            this.btnSalir.Location = new System.Drawing.Point(673, 431);
             this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(75, 23);
+            this.btnSalir.Size = new System.Drawing.Size(84, 33);
             this.btnSalir.TabIndex = 5;
             this.btnSalir.Text = "Salir";
             this.btnSalir.UseVisualStyleBackColor = true;
@@ -118,7 +119,7 @@
             // 
             this.btnIngresar.Location = new System.Drawing.Point(388, 264);
             this.btnIngresar.Name = "btnIngresar";
-            this.btnIngresar.Size = new System.Drawing.Size(75, 23);
+            this.btnIngresar.Size = new System.Drawing.Size(79, 46);
             this.btnIngresar.TabIndex = 4;
             this.btnIngresar.Text = "Ingresar";
             this.btnIngresar.UseVisualStyleBackColor = true;
@@ -129,7 +130,7 @@
             this.txtContraseñaLogin.Location = new System.Drawing.Point(355, 197);
             this.txtContraseñaLogin.Name = "txtContraseñaLogin";
             this.txtContraseñaLogin.PasswordChar = '*';
-            this.txtContraseñaLogin.Size = new System.Drawing.Size(148, 20);
+            this.txtContraseñaLogin.Size = new System.Drawing.Size(148, 26);
             this.txtContraseñaLogin.TabIndex = 3;
             this.txtContraseñaLogin.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtContraseñaLogin_KeyPress);
             // 
@@ -137,16 +138,16 @@
             // 
             this.txtCedulaLogin.Location = new System.Drawing.Point(355, 159);
             this.txtCedulaLogin.Name = "txtCedulaLogin";
-            this.txtCedulaLogin.Size = new System.Drawing.Size(148, 20);
+            this.txtCedulaLogin.Size = new System.Drawing.Size(148, 26);
             this.txtCedulaLogin.TabIndex = 2;
             this.txtCedulaLogin.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCedulaLogin_KeyPress);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(266, 200);
+            this.label2.Location = new System.Drawing.Point(242, 200);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(64, 13);
+            this.label2.Size = new System.Drawing.Size(95, 18);
             this.label2.TabIndex = 1;
             this.label2.Text = "Contraseña:";
             // 
@@ -155,12 +156,13 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(266, 159);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(43, 13);
+            this.label1.Size = new System.Drawing.Size(61, 18);
             this.label1.TabIndex = 0;
             this.label1.Text = "Cedula:";
             // 
             // tabPage2
             // 
+            this.tabPage2.BackColor = System.Drawing.Color.DarkGray;
             this.tabPage2.Controls.Add(this.label9);
             this.tabPage2.Controls.Add(this.button1);
             this.tabPage2.Controls.Add(this.comboSexo);
@@ -173,13 +175,12 @@
             this.tabPage2.Controls.Add(this.label5);
             this.tabPage2.Controls.Add(this.label4);
             this.tabPage2.Controls.Add(this.label3);
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
+            this.tabPage2.Location = new System.Drawing.Point(4, 27);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(771, 473);
+            this.tabPage2.Size = new System.Drawing.Size(771, 468);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Registro";
-            this.tabPage2.UseVisualStyleBackColor = true;
             this.tabPage2.Click += new System.EventHandler(this.tabPage2_Click);
             // 
             // label9
@@ -196,7 +197,7 @@
             // 
             this.button1.Location = new System.Drawing.Point(318, 369);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.Size = new System.Drawing.Size(114, 30);
             this.button1.TabIndex = 10;
             this.button1.Text = "Registrarse";
             this.button1.UseVisualStyleBackColor = true;
@@ -211,21 +212,21 @@
             "Femenino"});
             this.comboSexo.Location = new System.Drawing.Point(300, 231);
             this.comboSexo.Name = "comboSexo";
-            this.comboSexo.Size = new System.Drawing.Size(188, 21);
+            this.comboSexo.Size = new System.Drawing.Size(188, 26);
             this.comboSexo.TabIndex = 9;
             // 
             // txtContraseña
             // 
             this.txtContraseña.Location = new System.Drawing.Point(300, 293);
             this.txtContraseña.Name = "txtContraseña";
-            this.txtContraseña.Size = new System.Drawing.Size(188, 20);
+            this.txtContraseña.Size = new System.Drawing.Size(188, 26);
             this.txtContraseña.TabIndex = 8;
             // 
             // txtEdadX
             // 
             this.txtEdadX.Location = new System.Drawing.Point(298, 180);
             this.txtEdadX.Name = "txtEdadX";
-            this.txtEdadX.Size = new System.Drawing.Size(190, 20);
+            this.txtEdadX.Size = new System.Drawing.Size(190, 26);
             this.txtEdadX.TabIndex = 7;
             this.txtEdadX.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtEdad_KeyPress);
             // 
@@ -233,7 +234,7 @@
             // 
             this.txtNombre.Location = new System.Drawing.Point(298, 117);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(190, 20);
+            this.txtNombre.Size = new System.Drawing.Size(190, 26);
             this.txtNombre.TabIndex = 6;
             this.txtNombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNombre_KeyPress);
             // 
@@ -241,7 +242,7 @@
             // 
             this.txtCedula.Location = new System.Drawing.Point(298, 62);
             this.txtCedula.Name = "txtCedula";
-            this.txtCedula.Size = new System.Drawing.Size(190, 20);
+            this.txtCedula.Size = new System.Drawing.Size(190, 26);
             this.txtCedula.TabIndex = 5;
             this.txtCedula.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCedula_KeyPress);
             // 
@@ -250,7 +251,7 @@
             this.label7.AutoSize = true;
             this.label7.Location = new System.Drawing.Point(205, 301);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(64, 13);
+            this.label7.Size = new System.Drawing.Size(95, 18);
             this.label7.TabIndex = 4;
             this.label7.Text = "Contraseña:";
             // 
@@ -259,7 +260,7 @@
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(205, 240);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(34, 13);
+            this.label6.Size = new System.Drawing.Size(45, 18);
             this.label6.TabIndex = 3;
             this.label6.Text = "Sexo:";
             // 
@@ -268,7 +269,7 @@
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(205, 187);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(35, 13);
+            this.label5.Size = new System.Drawing.Size(47, 18);
             this.label5.TabIndex = 2;
             this.label5.Text = "Edad:";
             // 
@@ -277,7 +278,7 @@
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(205, 124);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(47, 13);
+            this.label4.Size = new System.Drawing.Size(70, 18);
             this.label4.TabIndex = 1;
             this.label4.Text = "Nombre:";
             // 
@@ -286,7 +287,7 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(205, 69);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(43, 13);
+            this.label3.Size = new System.Drawing.Size(61, 18);
             this.label3.TabIndex = 0;
             this.label3.Text = "Cedula:";
             // 
