@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Principal));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.button2 = new System.Windows.Forms.Button();
@@ -87,7 +88,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(648, 46);
+            this.button2.Location = new System.Drawing.Point(693, 67);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 34);
             this.button2.TabIndex = 7;
@@ -107,21 +108,21 @@
             // 
             // btnSalir
             // 
-            this.btnSalir.Location = new System.Drawing.Point(673, 431);
+            this.btnSalir.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnSalir.BackgroundImage")));
+            this.btnSalir.Location = new System.Drawing.Point(709, 6);
             this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(84, 33);
+            this.btnSalir.Size = new System.Drawing.Size(48, 50);
             this.btnSalir.TabIndex = 5;
-            this.btnSalir.Text = "Salir";
             this.btnSalir.UseVisualStyleBackColor = true;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
             // btnIngresar
             // 
-            this.btnIngresar.Location = new System.Drawing.Point(388, 264);
+            this.btnIngresar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnIngresar.BackgroundImage")));
+            this.btnIngresar.Location = new System.Drawing.Point(394, 258);
             this.btnIngresar.Name = "btnIngresar";
-            this.btnIngresar.Size = new System.Drawing.Size(79, 46);
+            this.btnIngresar.Size = new System.Drawing.Size(66, 64);
             this.btnIngresar.TabIndex = 4;
-            this.btnIngresar.Text = "Ingresar";
             this.btnIngresar.UseVisualStyleBackColor = true;
             this.btnIngresar.Click += new System.EventHandler(this.btnIngresar_Click);
             // 
