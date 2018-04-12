@@ -31,6 +31,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Principal));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
             this.btnSalir = new System.Windows.Forms.Button();
@@ -38,6 +40,7 @@
             this.txtContraseñaLogin = new System.Windows.Forms.TextBox();
             this.txtCedulaLogin = new System.Windows.Forms.TextBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.button5 = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.comboSexo = new System.Windows.Forms.ComboBox();
@@ -50,9 +53,6 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -86,6 +86,24 @@
             this.tabPage1.Size = new System.Drawing.Size(771, 468);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Login";
+            // 
+            // button4
+            // 
+            this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
+            this.button4.Location = new System.Drawing.Point(207, 234);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(70, 73);
+            this.button4.TabIndex = 9;
+            this.button4.UseVisualStyleBackColor = true;
+            // 
+            // button3
+            // 
+            this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
+            this.button3.Location = new System.Drawing.Point(207, 129);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(70, 77);
+            this.button3.TabIndex = 8;
+            this.button3.UseVisualStyleBackColor = true;
             // 
             // button2
             // 
@@ -167,6 +185,15 @@
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Registro";
             this.tabPage2.Click += new System.EventHandler(this.tabPage2_Click);
+            // 
+            // button5
+            // 
+            this.button5.Image = ((System.Drawing.Image)(resources.GetObject("button5.Image")));
+            this.button5.Location = new System.Drawing.Point(27, 27);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(147, 148);
+            this.button5.TabIndex = 12;
+            this.button5.UseVisualStyleBackColor = true;
             // 
             // label9
             // 
@@ -275,34 +302,6 @@
             this.label3.Size = new System.Drawing.Size(61, 18);
             this.label3.TabIndex = 0;
             this.label3.Text = "Cedula:";
-            // 
-            // button3
-            // 
-            this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
-            this.button3.Location = new System.Drawing.Point(207, 129);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(70, 77);
-            this.button3.TabIndex = 8;
-            this.button3.UseVisualStyleBackColor = true;
-            // 
-            // button4
-            // 
-            this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
-            this.button4.Location = new System.Drawing.Point(207, 234);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(70, 73);
-            this.button4.TabIndex = 9;
-            this.button4.UseVisualStyleBackColor = true;
-            // 
-            // button5
-            // 
-            this.button5.Image = ((System.Drawing.Image)(resources.GetObject("button5.Image")));
-            this.button5.Location = new System.Drawing.Point(27, 27);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(147, 148);
-            this.button5.TabIndex = 12;
-            this.button5.Text = "button5";
-            this.button5.UseVisualStyleBackColor = true;
             // 
             // Principal
             // 
