@@ -19,6 +19,7 @@ namespace Capa_Presentacion
         {
             InitializeComponent();
             this.CenterToScreen();
+            serialPort1.Open();
         }
 
         private void Parqueo_Load(object sender, EventArgs e)
@@ -200,6 +201,11 @@ namespace Capa_Presentacion
                 Carrito2.Visible = false;
             }
 
+        }
+
+        private void serialPort1_DataReceived(object sender, System.IO.Ports.SerialDataReceivedEventArgs e)
+        {
+            MessageBox.Show(serialPort1.ReadLine());
         }
     }
 

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Parqueo));
             this.btnParqueo = new System.Windows.Forms.Button();
             this.palabra = new System.Windows.Forms.Label();
@@ -48,6 +49,7 @@
             this.btnAuto1 = new System.Windows.Forms.Button();
             this.btnAuto2 = new System.Windows.Forms.Button();
             this.Motocicleta = new System.Windows.Forms.Button();
+            this.serialPort1 = new System.IO.Ports.SerialPort(this.components);
             this.SuspendLayout();
             // 
             // btnParqueo
@@ -250,6 +252,11 @@
             this.Motocicleta.TabIndex = 21;
             this.Motocicleta.UseVisualStyleBackColor = true;
             // 
+            // serialPort1
+            // 
+            this.serialPort1.PortName = "COM3";
+            this.serialPort1.DataReceived += new System.IO.Ports.SerialDataReceivedEventHandler(this.serialPort1_DataReceived);
+            // 
             // Parqueo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
@@ -305,5 +312,6 @@
         private System.Windows.Forms.Button btnAuto1;
         private System.Windows.Forms.Button btnAuto2;
         private System.Windows.Forms.Button Motocicleta;
+        public System.IO.Ports.SerialPort serialPort1;
     }
 }
