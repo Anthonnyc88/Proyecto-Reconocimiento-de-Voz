@@ -23,8 +23,12 @@ namespace Capa_Presentacion
 
         private void Parqueo_Load(object sender, EventArgs e)
         {
-            Carrito.Visible = true;
-            Carrito2.Visible = true;
+            Carrito.Visible = false;
+            Carrito2.Visible = false;
+            Motocicleta.Visible = false;
+
+
+
             
         }
 
@@ -50,7 +54,7 @@ namespace Capa_Presentacion
         {
 
            
-            Carrito.Visible = true;
+           
             try
             {
                 escucha.SetInputToDefaultAudioDevice();
@@ -80,39 +84,47 @@ namespace Capa_Presentacion
                 {
                     Carrito.Location = new Point(Carrito.Location.X - 20, Carrito.Location.Y);
                     Carrito2.Location = new Point(Carrito2.Location.X - 20, Carrito2.Location.Y);
+                    Motocicleta.Location = new Point(Motocicleta.Location.X - 20, Motocicleta.Location.Y);
+
                 }
                 else if  (palabra.Text.Equals("siniestra"))
                 {
                     Carrito.Location = new Point(Carrito.Location.X - 20, Carrito.Location.Y);
                     Carrito2.Location = new Point(Carrito2.Location.X - 20, Carrito2.Location.Y);
+                    Motocicleta.Location = new Point(Motocicleta.Location.X - 20, Motocicleta.Location.Y);
                 }
                 else if (palabra.Text.Equals("derecha")) {
                     Carrito.Location = new Point(Carrito.Location.X + 20, Carrito.Location.Y);
                     Carrito2.Location = new Point(Carrito2.Location.X + 20, Carrito2.Location.Y);
+                    Motocicleta.Location = new Point(Motocicleta.Location.X + 20, Motocicleta.Location.Y);
 
                 }
                 else if (palabra.Text.Equals("arriba"))
                 {
                     Carrito.Location = new Point(Carrito.Location.X , Carrito.Location.Y -20);
                     Carrito2.Location = new Point(Carrito2.Location.X, Carrito2.Location.Y - 20);
+                    Motocicleta.Location = new Point(Motocicleta.Location.X, Motocicleta.Location.Y - 20);
                 }
 
                 else if (palabra.Text.Equals("subir"))
                 {
                     Carrito.Location = new Point(Carrito.Location.X, Carrito.Location.Y - 20);
                     Carrito2.Location = new Point(Carrito2.Location.X, Carrito2.Location.Y - 20);
+                    Motocicleta.Location = new Point(Motocicleta.Location.X, Motocicleta.Location.Y - 20);
 
                 }
                 else if (palabra.Text.Equals("abajo"))
                 {
                     Carrito.Location = new Point(Carrito.Location.X, Carrito.Location.Y + 20);
                     Carrito2.Location = new Point(Carrito2.Location.X, Carrito2.Location.Y + 20);
+                    Motocicleta.Location = new Point(Motocicleta.Location.X, Motocicleta.Location.Y + 20);
                 }
 
                 else if (palabra.Text.Equals("bajar"))
                 {
                     Carrito.Location = new Point(Carrito.Location.X, Carrito.Location.Y + 20);
                     Carrito2.Location = new Point(Carrito2.Location.X, Carrito2.Location.Y + 20);
+                    Motocicleta.Location = new Point(Motocicleta.Location.X, Motocicleta.Location.Y + 20);
 
                 }
 
@@ -152,6 +164,42 @@ namespace Capa_Presentacion
         private void btnPalabras_Click(object sender, EventArgs e)
         {
             MessageBox.Show("arriba , subir , abajo , bajar , izquierda , siniestra, derecha , negro , amarillo", "Lista de Palabras de muevelo con la voz", MessageBoxButtons.OKCancel);
+        }
+
+        private void btnAuto1_Click(object sender, EventArgs e)
+        {
+            Carrito2.Visible = true;
+
+            if (Carrito2.Visible==true)
+            {
+                Carrito.Visible = false;
+                Motocicleta.Visible = false;
+            }
+            
+
+        }
+
+        private void btnAuto2_Click(object sender, EventArgs e)
+        {
+            Carrito.Visible = true;
+
+            if (Carrito.Visible == true)
+            {
+                Carrito2.Visible = false;
+                Motocicleta.Visible = false;
+            }
+        }
+
+        private void btnMoto_Click(object sender, EventArgs e)
+        {
+            Motocicleta.Visible = true;
+
+            if(Motocicleta.Visible == true)
+            {
+                Carrito.Visible = false;
+                Carrito2.Visible = false;
+            }
+
         }
     }
 

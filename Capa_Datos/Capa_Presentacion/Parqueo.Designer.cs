@@ -44,6 +44,10 @@
             this.button6 = new System.Windows.Forms.Button();
             this.Carrito = new System.Windows.Forms.Button();
             this.txtPalabras = new System.Windows.Forms.TextBox();
+            this.btnMoto = new System.Windows.Forms.Button();
+            this.btnAuto1 = new System.Windows.Forms.Button();
+            this.btnAuto2 = new System.Windows.Forms.Button();
+            this.Motocicleta = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnParqueo
@@ -124,12 +128,11 @@
             // 
             this.Carrito2.ForeColor = System.Drawing.Color.Black;
             this.Carrito2.Image = ((System.Drawing.Image)(resources.GetObject("Carrito2.Image")));
-            this.Carrito2.Location = new System.Drawing.Point(543, 401);
+            this.Carrito2.Location = new System.Drawing.Point(476, 313);
             this.Carrito2.Margin = new System.Windows.Forms.Padding(4);
             this.Carrito2.Name = "Carrito2";
             this.Carrito2.Size = new System.Drawing.Size(168, 70);
             this.Carrito2.TabIndex = 10;
-            this.Carrito2.Text = "Carro 2";
             this.Carrito2.UseVisualStyleBackColor = true;
             // 
             // button2
@@ -194,12 +197,11 @@
             // 
             // Carrito
             // 
-            this.Carrito.Image = global::Capa_Presentacion.Properties.Resources.if_TowTruckYellow_22997;
-            this.Carrito.Location = new System.Drawing.Point(543, 263);
+            this.Carrito.Image = ((System.Drawing.Image)(resources.GetObject("Carrito.Image")));
+            this.Carrito.Location = new System.Drawing.Point(476, 207);
             this.Carrito.Name = "Carrito";
             this.Carrito.Size = new System.Drawing.Size(168, 89);
             this.Carrito.TabIndex = 16;
-            this.Carrito.Text = "Carro1";
             this.Carrito.UseVisualStyleBackColor = true;
             // 
             // txtPalabras
@@ -209,12 +211,55 @@
             this.txtPalabras.Size = new System.Drawing.Size(118, 21);
             this.txtPalabras.TabIndex = 17;
             // 
+            // btnMoto
+            // 
+            this.btnMoto.Image = ((System.Drawing.Image)(resources.GetObject("btnMoto.Image")));
+            this.btnMoto.Location = new System.Drawing.Point(638, 6);
+            this.btnMoto.Name = "btnMoto";
+            this.btnMoto.Size = new System.Drawing.Size(118, 71);
+            this.btnMoto.TabIndex = 18;
+            this.btnMoto.UseVisualStyleBackColor = true;
+            this.btnMoto.Click += new System.EventHandler(this.btnMoto_Click);
+            // 
+            // btnAuto1
+            // 
+            this.btnAuto1.Image = ((System.Drawing.Image)(resources.GetObject("btnAuto1.Image")));
+            this.btnAuto1.Location = new System.Drawing.Point(762, 5);
+            this.btnAuto1.Name = "btnAuto1";
+            this.btnAuto1.Size = new System.Drawing.Size(114, 69);
+            this.btnAuto1.TabIndex = 19;
+            this.btnAuto1.UseVisualStyleBackColor = true;
+            this.btnAuto1.Click += new System.EventHandler(this.btnAuto1_Click);
+            // 
+            // btnAuto2
+            // 
+            this.btnAuto2.Image = ((System.Drawing.Image)(resources.GetObject("btnAuto2.Image")));
+            this.btnAuto2.Location = new System.Drawing.Point(882, 5);
+            this.btnAuto2.Name = "btnAuto2";
+            this.btnAuto2.Size = new System.Drawing.Size(105, 69);
+            this.btnAuto2.TabIndex = 20;
+            this.btnAuto2.UseVisualStyleBackColor = true;
+            this.btnAuto2.Click += new System.EventHandler(this.btnAuto2_Click);
+            // 
+            // Motocicleta
+            // 
+            this.Motocicleta.Image = ((System.Drawing.Image)(resources.GetObject("Motocicleta.Image")));
+            this.Motocicleta.Location = new System.Drawing.Point(476, 390);
+            this.Motocicleta.Name = "Motocicleta";
+            this.Motocicleta.Size = new System.Drawing.Size(168, 64);
+            this.Motocicleta.TabIndex = 21;
+            this.Motocicleta.UseVisualStyleBackColor = true;
+            // 
             // Parqueo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.MediumBlue;
             this.ClientSize = new System.Drawing.Size(1235, 586);
+            this.Controls.Add(this.Motocicleta);
+            this.Controls.Add(this.btnAuto2);
+            this.Controls.Add(this.btnAuto1);
+            this.Controls.Add(this.btnMoto);
             this.Controls.Add(this.txtPalabras);
             this.Controls.Add(this.Carrito);
             this.Controls.Add(this.button6);
@@ -233,7 +278,7 @@
             this.Font = new System.Drawing.Font("Century", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Parqueo";
-            this.Text = "Parqueo";
+            this.Text = " ";
             this.Load += new System.EventHandler(this.Parqueo_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -256,5 +301,9 @@
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button Carrito;
         private System.Windows.Forms.TextBox txtPalabras;
+        private System.Windows.Forms.Button btnMoto;
+        private System.Windows.Forms.Button btnAuto1;
+        private System.Windows.Forms.Button btnAuto2;
+        private System.Windows.Forms.Button Motocicleta;
     }
 }
