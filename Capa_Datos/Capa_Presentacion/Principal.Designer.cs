@@ -37,8 +37,6 @@
             this.btnIngresar = new System.Windows.Forms.Button();
             this.txtContraseñaLogin = new System.Windows.Forms.TextBox();
             this.txtCedulaLogin = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.label9 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
@@ -52,6 +50,9 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -70,15 +71,15 @@
             // 
             // tabPage1
             // 
-            this.tabPage1.BackColor = System.Drawing.Color.DarkGray;
+            this.tabPage1.BackColor = System.Drawing.Color.MediumBlue;
+            this.tabPage1.Controls.Add(this.button4);
+            this.tabPage1.Controls.Add(this.button3);
             this.tabPage1.Controls.Add(this.button2);
             this.tabPage1.Controls.Add(this.label8);
             this.tabPage1.Controls.Add(this.btnSalir);
             this.tabPage1.Controls.Add(this.btnIngresar);
             this.tabPage1.Controls.Add(this.txtContraseñaLogin);
             this.tabPage1.Controls.Add(this.txtCedulaLogin);
-            this.tabPage1.Controls.Add(this.label2);
-            this.tabPage1.Controls.Add(this.label1);
             this.tabPage1.Location = new System.Drawing.Point(4, 27);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
@@ -100,7 +101,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Rockwell", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(372, 81);
+            this.label8.Location = new System.Drawing.Point(355, 74);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(64, 20);
             this.label8.TabIndex = 6;
@@ -119,7 +120,7 @@
             // btnIngresar
             // 
             this.btnIngresar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnIngresar.BackgroundImage")));
-            this.btnIngresar.Location = new System.Drawing.Point(394, 258);
+            this.btnIngresar.Location = new System.Drawing.Point(344, 337);
             this.btnIngresar.Name = "btnIngresar";
             this.btnIngresar.Size = new System.Drawing.Size(66, 64);
             this.btnIngresar.TabIndex = 4;
@@ -128,7 +129,7 @@
             // 
             // txtContraseñaLogin
             // 
-            this.txtContraseñaLogin.Location = new System.Drawing.Point(355, 197);
+            this.txtContraseñaLogin.Location = new System.Drawing.Point(312, 258);
             this.txtContraseñaLogin.Name = "txtContraseñaLogin";
             this.txtContraseñaLogin.PasswordChar = '*';
             this.txtContraseñaLogin.Size = new System.Drawing.Size(148, 26);
@@ -137,33 +138,16 @@
             // 
             // txtCedulaLogin
             // 
-            this.txtCedulaLogin.Location = new System.Drawing.Point(355, 159);
+            this.txtCedulaLogin.Location = new System.Drawing.Point(312, 155);
             this.txtCedulaLogin.Name = "txtCedulaLogin";
             this.txtCedulaLogin.Size = new System.Drawing.Size(148, 26);
             this.txtCedulaLogin.TabIndex = 2;
             this.txtCedulaLogin.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCedulaLogin_KeyPress);
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(242, 200);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(95, 18);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Contraseña:";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(266, 159);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(61, 18);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Cedula:";
-            // 
             // tabPage2
             // 
-            this.tabPage2.BackColor = System.Drawing.Color.DarkGray;
+            this.tabPage2.BackColor = System.Drawing.Color.MediumBlue;
+            this.tabPage2.Controls.Add(this.button5);
             this.tabPage2.Controls.Add(this.label9);
             this.tabPage2.Controls.Add(this.button1);
             this.tabPage2.Controls.Add(this.comboSexo);
@@ -292,6 +276,34 @@
             this.label3.TabIndex = 0;
             this.label3.Text = "Cedula:";
             // 
+            // button3
+            // 
+            this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
+            this.button3.Location = new System.Drawing.Point(207, 129);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(70, 77);
+            this.button3.TabIndex = 8;
+            this.button3.UseVisualStyleBackColor = true;
+            // 
+            // button4
+            // 
+            this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
+            this.button4.Location = new System.Drawing.Point(207, 234);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(70, 73);
+            this.button4.TabIndex = 9;
+            this.button4.UseVisualStyleBackColor = true;
+            // 
+            // button5
+            // 
+            this.button5.Image = ((System.Drawing.Image)(resources.GetObject("button5.Image")));
+            this.button5.Location = new System.Drawing.Point(27, 27);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(147, 148);
+            this.button5.TabIndex = 12;
+            this.button5.Text = "button5";
+            this.button5.UseVisualStyleBackColor = true;
+            // 
             // Principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -318,8 +330,6 @@
         private System.Windows.Forms.Button btnIngresar;
         private System.Windows.Forms.TextBox txtContraseñaLogin;
         private System.Windows.Forms.TextBox txtCedulaLogin;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
@@ -335,6 +345,9 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button5;
     }
 }
 

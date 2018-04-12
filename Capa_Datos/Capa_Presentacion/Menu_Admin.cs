@@ -41,5 +41,10 @@ namespace Capa_Presentacion
         {
 
         }
+
+        private void opcionesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
