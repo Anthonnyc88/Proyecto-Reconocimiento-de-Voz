@@ -43,6 +43,7 @@
             this.button5 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.Carrito = new System.Windows.Forms.Button();
+            this.txtPalabras = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // btnParqueo
@@ -59,12 +60,12 @@
             // palabra
             // 
             this.palabra.AutoSize = true;
-            this.palabra.Location = new System.Drawing.Point(2, 10);
+            this.palabra.Location = new System.Drawing.Point(2, 16);
             this.palabra.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.palabra.Name = "palabra";
-            this.palabra.Size = new System.Drawing.Size(53, 15);
+            this.palabra.Size = new System.Drawing.Size(57, 15);
             this.palabra.TabIndex = 3;
-            this.palabra.Text = "Palabra";
+            this.palabra.Text = "Palabra:";
             // 
             // label2
             // 
@@ -201,12 +202,20 @@
             this.Carrito.Text = "Carro1";
             this.Carrito.UseVisualStyleBackColor = true;
             // 
+            // txtPalabras
+            // 
+            this.txtPalabras.Location = new System.Drawing.Point(63, 13);
+            this.txtPalabras.Name = "txtPalabras";
+            this.txtPalabras.Size = new System.Drawing.Size(118, 21);
+            this.txtPalabras.TabIndex = 17;
+            // 
             // Parqueo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.DarkGray;
+            this.BackColor = System.Drawing.Color.MediumBlue;
             this.ClientSize = new System.Drawing.Size(1235, 586);
+            this.Controls.Add(this.txtPalabras);
             this.Controls.Add(this.Carrito);
             this.Controls.Add(this.button6);
             this.Controls.Add(this.button5);
@@ -246,5 +255,6 @@
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button Carrito;
+        private System.Windows.Forms.TextBox txtPalabras;
     }
 }

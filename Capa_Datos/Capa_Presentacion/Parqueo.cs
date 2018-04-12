@@ -74,7 +74,7 @@ namespace Capa_Presentacion
         {
             foreach (RecognizedWordUnit palabra in e.Result.Words)
             {
-                label2.Text = palabra.Text;
+                txtPalabras.Text = palabra.Text;
 
                 if (palabra.Text.Equals("izquierda"))
                 {
@@ -128,9 +128,19 @@ namespace Capa_Presentacion
 
         private void button1_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            Principal a = new Principal();
-            a.Show();
+
+
+            DialogResult opcion;
+            opcion = MessageBox.Show("Realmente desea Salir de la Aplicacion", "Salir del Programa", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (opcion == DialogResult.Yes)
+            {
+                
+                this.Hide();
+                Principal a = new Principal();
+                a.Show();
+            }
+
+            
            
         }
 
