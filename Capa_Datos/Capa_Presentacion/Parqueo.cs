@@ -19,7 +19,7 @@ namespace Capa_Presentacion
         {
             InitializeComponent();
             this.CenterToScreen();
-            serialPort1.Open();
+            //serialPort1.Open();
         }
 
         private void Parqueo_Load(object sender, EventArgs e)
