@@ -137,7 +137,7 @@
             // 
             // btnIngresar
             // 
-            this.btnIngresar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnIngresar.BackgroundImage")));
+            this.btnIngresar.Image = ((System.Drawing.Image)(resources.GetObject("btnIngresar.Image")));
             this.btnIngresar.Location = new System.Drawing.Point(344, 337);
             this.btnIngresar.Name = "btnIngresar";
             this.btnIngresar.Size = new System.Drawing.Size(66, 64);
@@ -207,11 +207,11 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(318, 369);
+            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
+            this.button1.Location = new System.Drawing.Point(318, 343);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(114, 30);
+            this.button1.Size = new System.Drawing.Size(114, 44);
             this.button1.TabIndex = 10;
-            this.button1.Text = "Registrarse";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
