@@ -15,6 +15,7 @@ namespace Capa_Presentacion
         public Menu_Admin()
         {
             InitializeComponent();
+            labelNombreAdmin.Text = Principal.nombreUsuario + "!!";
             this.CenterToScreen();
         }
 

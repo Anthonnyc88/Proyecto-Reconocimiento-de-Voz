@@ -63,13 +63,14 @@ namespace Capa_Presentacion
             if (xml.Consulta_Login(txtCedulaLogin.Text, txtContraseñaLogin.Text) == "Cliente")
             {
 
-                nombreUsuario = xml.Retorna_Nombre(Convert.ToInt16(txtCedulaLogin.Text));
+                nombreUsuario = xml.Retorna_Nombre(Convert.ToInt32(txtCedulaLogin.Text));
                 this.Hide();
                 Parqueo conectar = new Parqueo();
                 conectar.Show();
             }
             else if (xml.Consulta_Login(txtCedulaLogin.Text, txtContraseñaLogin.Text) == "Administrador") {
 
+                nombreUsuario = xml.Retorna_Nombre(Convert.ToInt32(txtCedulaLogin.Text));
                 this.Hide();
                 Menu_Admin mA = new Menu_Admin();
                 mA.Show();

@@ -15,10 +15,12 @@ namespace Capa_Presentacion
     {
 
         private SpeechRecognitionEngine escucha = new SpeechRecognitionEngine();
+
         public Parqueo()
         {
             InitializeComponent();
             this.CenterToScreen();
+            labelNombreUsuario.Text = Principal.nombreUsuario;
             //serialPort1.Open();
         }
 

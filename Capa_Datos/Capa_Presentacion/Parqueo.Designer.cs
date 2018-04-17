@@ -50,6 +50,8 @@
             this.btnAuto2 = new System.Windows.Forms.Button();
             this.Motocicleta = new System.Windows.Forms.Button();
             this.serialPort1 = new System.IO.Ports.SerialPort(this.components);
+            this.label1 = new System.Windows.Forms.Label();
+            this.labelNombreUsuario = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btnParqueo
@@ -257,12 +259,31 @@
             this.serialPort1.PortName = "COM3";
             this.serialPort1.DataReceived += new System.IO.Ports.SerialDataReceivedEventHandler(this.serialPort1_DataReceived);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(13, 80);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(59, 15);
+            this.label1.TabIndex = 22;
+            this.label1.Text = "Usuario:";
+            // 
+            // labelNombreUsuario
+            // 
+            this.labelNombreUsuario.AutoSize = true;
+            this.labelNombreUsuario.Location = new System.Drawing.Point(79, 80);
+            this.labelNombreUsuario.Name = "labelNombreUsuario";
+            this.labelNombreUsuario.Size = new System.Drawing.Size(0, 15);
+            this.labelNombreUsuario.TabIndex = 23;
+            // 
             // Parqueo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.MediumBlue;
             this.ClientSize = new System.Drawing.Size(1235, 586);
+            this.Controls.Add(this.labelNombreUsuario);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.Motocicleta);
             this.Controls.Add(this.btnAuto2);
             this.Controls.Add(this.btnAuto1);
@@ -313,5 +334,7 @@
         private System.Windows.Forms.Button btnAuto2;
         private System.Windows.Forms.Button Motocicleta;
         public System.IO.Ports.SerialPort serialPort1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label labelNombreUsuario;
     }
 }
