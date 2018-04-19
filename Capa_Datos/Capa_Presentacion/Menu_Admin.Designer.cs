@@ -67,7 +67,7 @@
             this.opcionesToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(477, 26);
+            this.menuStrip1.Size = new System.Drawing.Size(489, 26);
             this.menuStrip1.TabIndex = 2;
             this.menuStrip1.Text = "menuStrip1";
             this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked);
@@ -103,7 +103,7 @@
             // 
             this.labelNombreAdmin.AutoSize = true;
             this.labelNombreAdmin.Font = new System.Drawing.Font("Perpetua Titling MT", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelNombreAdmin.Location = new System.Drawing.Point(227, 52);
+            this.labelNombreAdmin.Location = new System.Drawing.Point(296, 55);
             this.labelNombreAdmin.Name = "labelNombreAdmin";
             this.labelNombreAdmin.Size = new System.Drawing.Size(50, 13);
             this.labelNombreAdmin.TabIndex = 4;
@@ -112,10 +112,10 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Modern No. 20", 8.249999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Modern No. 20", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(127, 51);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(95, 14);
+            this.label2.Size = new System.Drawing.Size(120, 17);
             this.label2.TabIndex = 5;
             this.label2.Text = "¡¡BIENVENIDO";
             // 
@@ -123,8 +123,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.MediumBlue;
-            this.ClientSize = new System.Drawing.Size(477, 352);
+            this.BackColor = System.Drawing.Color.LightCyan;
+            this.ClientSize = new System.Drawing.Size(489, 375);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.labelNombreAdmin);
             this.Controls.Add(this.button2);
@@ -133,7 +133,7 @@
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Menu_Admin";
-            this.Text = "Menu_Admin";
+            this.Text = "MENU_ADMIN";
             this.Load += new System.EventHandler(this.Menu_Admin_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();

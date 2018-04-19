@@ -71,7 +71,7 @@
             // 
             // tabPage1
             // 
-            this.tabPage1.BackColor = System.Drawing.Color.MediumBlue;
+            this.tabPage1.BackColor = System.Drawing.Color.LightCyan;
             this.tabPage1.Controls.Add(this.button4);
             this.tabPage1.Controls.Add(this.button3);
             this.tabPage1.Controls.Add(this.button2);
@@ -90,18 +90,18 @@
             // button4
             // 
             this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
-            this.button4.Location = new System.Drawing.Point(207, 234);
+            this.button4.Location = new System.Drawing.Point(165, 212);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(70, 73);
+            this.button4.Size = new System.Drawing.Size(112, 120);
             this.button4.TabIndex = 9;
             this.button4.UseVisualStyleBackColor = true;
             // 
             // button3
             // 
             this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
-            this.button3.Location = new System.Drawing.Point(207, 129);
+            this.button3.Location = new System.Drawing.Point(165, 92);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(70, 77);
+            this.button3.Size = new System.Drawing.Size(112, 114);
             this.button3.TabIndex = 8;
             this.button3.UseVisualStyleBackColor = true;
             // 
@@ -138,9 +138,9 @@
             // btnIngresar
             // 
             this.btnIngresar.Image = ((System.Drawing.Image)(resources.GetObject("btnIngresar.Image")));
-            this.btnIngresar.Location = new System.Drawing.Point(344, 337);
+            this.btnIngresar.Location = new System.Drawing.Point(369, 372);
             this.btnIngresar.Name = "btnIngresar";
-            this.btnIngresar.Size = new System.Drawing.Size(66, 64);
+            this.btnIngresar.Size = new System.Drawing.Size(73, 64);
             this.btnIngresar.TabIndex = 4;
             this.btnIngresar.UseVisualStyleBackColor = true;
             this.btnIngresar.Click += new System.EventHandler(this.btnIngresar_Click);
@@ -164,7 +164,7 @@
             // 
             // tabPage2
             // 
-            this.tabPage2.BackColor = System.Drawing.Color.MediumBlue;
+            this.tabPage2.BackColor = System.Drawing.Color.LightCyan;
             this.tabPage2.Controls.Add(this.button5);
             this.tabPage2.Controls.Add(this.label9);
             this.tabPage2.Controls.Add(this.button1);

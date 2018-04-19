@@ -86,8 +86,8 @@
             // 
             // btnPrueba
             // 
-            this.btnPrueba.BackColor = System.Drawing.SystemColors.GrayText;
-            this.btnPrueba.ForeColor = System.Drawing.Color.Gold;
+            this.btnPrueba.BackColor = System.Drawing.Color.Silver;
+            this.btnPrueba.ForeColor = System.Drawing.Color.Yellow;
             this.btnPrueba.Location = new System.Drawing.Point(5, 263);
             this.btnPrueba.Margin = new System.Windows.Forms.Padding(4);
             this.btnPrueba.Name = "btnPrueba";
@@ -141,8 +141,8 @@
             // 
             // button2
             // 
-            this.button2.BackColor = System.Drawing.SystemColors.GrayText;
-            this.button2.ForeColor = System.Drawing.Color.Gold;
+            this.button2.BackColor = System.Drawing.Color.Silver;
+            this.button2.ForeColor = System.Drawing.Color.Yellow;
             this.button2.Location = new System.Drawing.Point(5, 401);
             this.button2.Margin = new System.Windows.Forms.Padding(4);
             this.button2.Name = "button2";
@@ -153,8 +153,8 @@
             // 
             // button3
             // 
-            this.button3.BackColor = System.Drawing.SystemColors.GrayText;
-            this.button3.ForeColor = System.Drawing.Color.Gold;
+            this.button3.BackColor = System.Drawing.Color.Silver;
+            this.button3.ForeColor = System.Drawing.Color.Yellow;
             this.button3.Location = new System.Drawing.Point(5, 123);
             this.button3.Margin = new System.Windows.Forms.Padding(4);
             this.button3.Name = "button3";
@@ -165,8 +165,8 @@
             // 
             // button4
             // 
-            this.button4.BackColor = System.Drawing.SystemColors.GrayText;
-            this.button4.ForeColor = System.Drawing.Color.Gold;
+            this.button4.BackColor = System.Drawing.Color.Silver;
+            this.button4.ForeColor = System.Drawing.Color.Yellow;
             this.button4.Location = new System.Drawing.Point(882, 401);
             this.button4.Margin = new System.Windows.Forms.Padding(4);
             this.button4.Name = "button4";
@@ -177,8 +177,8 @@
             // 
             // button5
             // 
-            this.button5.BackColor = System.Drawing.SystemColors.GrayText;
-            this.button5.ForeColor = System.Drawing.Color.Gold;
+            this.button5.BackColor = System.Drawing.Color.Silver;
+            this.button5.ForeColor = System.Drawing.Color.Yellow;
             this.button5.Location = new System.Drawing.Point(882, 263);
             this.button5.Margin = new System.Windows.Forms.Padding(4);
             this.button5.Name = "button5";
@@ -189,8 +189,8 @@
             // 
             // button6
             // 
-            this.button6.BackColor = System.Drawing.SystemColors.GrayText;
-            this.button6.ForeColor = System.Drawing.Color.Gold;
+            this.button6.BackColor = System.Drawing.Color.Silver;
+            this.button6.ForeColor = System.Drawing.Color.Yellow;
             this.button6.Location = new System.Drawing.Point(882, 123);
             this.button6.Margin = new System.Windows.Forms.Padding(4);
             this.button6.Name = "button6";
@@ -280,7 +280,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.MediumBlue;
+            this.BackColor = System.Drawing.Color.LightCyan;
             this.ClientSize = new System.Drawing.Size(1235, 586);
             this.Controls.Add(this.labelNombreUsuario);
             this.Controls.Add(this.label1);
