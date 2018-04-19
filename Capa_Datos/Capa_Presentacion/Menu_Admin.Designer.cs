@@ -85,8 +85,9 @@
             // reportesToolStripMenuItem
             // 
             this.reportesToolStripMenuItem.Font = new System.Drawing.Font("Constantia", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.reportesToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("reportesToolStripMenuItem.Image")));
             this.reportesToolStripMenuItem.Name = "reportesToolStripMenuItem";
-            this.reportesToolStripMenuItem.Size = new System.Drawing.Size(141, 22);
+            this.reportesToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.reportesToolStripMenuItem.Text = "Reportes";
             this.reportesToolStripMenuItem.Click += new System.EventHandler(this.reportesToolStripMenuItem_Click);
             // 
@@ -105,9 +106,8 @@
             this.labelNombreAdmin.Font = new System.Drawing.Font("Perpetua Titling MT", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelNombreAdmin.Location = new System.Drawing.Point(296, 55);
             this.labelNombreAdmin.Name = "labelNombreAdmin";
-            this.labelNombreAdmin.Size = new System.Drawing.Size(50, 13);
+            this.labelNombreAdmin.Size = new System.Drawing.Size(0, 13);
             this.labelNombreAdmin.TabIndex = 4;
-            this.labelNombreAdmin.Text = "label2";
             // 
             // label2
             // 
