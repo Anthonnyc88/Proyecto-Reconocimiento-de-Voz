@@ -138,7 +138,7 @@
             // btnIngresar
             // 
             this.btnIngresar.Image = ((System.Drawing.Image)(resources.GetObject("btnIngresar.Image")));
-            this.btnIngresar.Location = new System.Drawing.Point(369, 372);
+            this.btnIngresar.Location = new System.Drawing.Point(346, 357);
             this.btnIngresar.Name = "btnIngresar";
             this.btnIngresar.Size = new System.Drawing.Size(73, 64);
             this.btnIngresar.TabIndex = 4;
