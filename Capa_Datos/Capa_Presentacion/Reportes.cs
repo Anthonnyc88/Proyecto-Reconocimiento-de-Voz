@@ -95,6 +95,9 @@ namespace Capa_Presentacion
             MessageBox.Show("Personas Mayores de 20 años en el Sistema: " + xml.Cantidad_Usuarios_Mayores());
         }
 
-      
+        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
     }
 }

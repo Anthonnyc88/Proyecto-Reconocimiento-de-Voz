@@ -46,7 +46,6 @@
             this.serialPort1 = new System.IO.Ports.SerialPort(this.components);
             this.label1 = new System.Windows.Forms.Label();
             this.labelNombreUsuario = new System.Windows.Forms.Label();
-            this.Listo = new System.Windows.Forms.Button();
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.progressBar2 = new System.Windows.Forms.ProgressBar();
             this.label3 = new System.Windows.Forms.Label();
@@ -201,16 +200,6 @@
             this.labelNombreUsuario.Size = new System.Drawing.Size(0, 15);
             this.labelNombreUsuario.TabIndex = 23;
             // 
-            // Listo
-            // 
-            this.Listo.Location = new System.Drawing.Point(235, 12);
-            this.Listo.Name = "Listo";
-            this.Listo.Size = new System.Drawing.Size(123, 48);
-            this.Listo.TabIndex = 24;
-            this.Listo.Text = "Terminamos";
-            this.Listo.UseVisualStyleBackColor = true;
-            this.Listo.Click += new System.EventHandler(this.Listo_Click);
-            // 
             // progressBar1
             // 
             this.progressBar1.Location = new System.Drawing.Point(5, 390);
@@ -243,7 +232,6 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.progressBar2);
             this.Controls.Add(this.progressBar1);
-            this.Controls.Add(this.Listo);
             this.Controls.Add(this.labelNombreUsuario);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.Motocicleta);
@@ -286,7 +274,6 @@
         public System.IO.Ports.SerialPort serialPort1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label labelNombreUsuario;
-        private System.Windows.Forms.Button Listo;
         private System.Windows.Forms.ProgressBar progressBar1;
         private System.Windows.Forms.ProgressBar progressBar2;
         private System.Windows.Forms.Label label3;
