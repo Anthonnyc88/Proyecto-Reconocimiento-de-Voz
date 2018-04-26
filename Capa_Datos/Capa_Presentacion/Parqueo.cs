@@ -14,6 +14,7 @@ namespace Capa_Presentacion
     public partial class Parqueo : Form
     {
 
+        public string mensaje;
         private SpeechRecognitionEngine escucha = new SpeechRecognitionEngine();
 
         public Parqueo()
@@ -22,6 +23,13 @@ namespace Capa_Presentacion
             this.CenterToScreen();
             labelNombreUsuario.Text = Principal.nombreUsuario;
             //serialPort1.Open();
+
+            //Puerto
+            serialPort1.PortName = "COM3";
+            serialPort1.BaudRate = 9600;
+            serialPort1.Open();
+
+
         }
 
         private void Parqueo_Load(object sender, EventArgs e)
@@ -30,10 +38,19 @@ namespace Capa_Presentacion
             Carrito2.Visible = false;
             Motocicleta.Visible = false;
 
+            if (serialPort1.IsOpen) serialPort1.Close();
 
 
-            
+           
+
+
+
+
+
+
         }
+
+       
 
         public void Reconocimiento(object sender, SpeechRecognizedEventArgs e)
         {
@@ -53,11 +70,10 @@ namespace Capa_Presentacion
 
         }
 
+        bool activado = false;
         private void btnParqueo_Click(object sender, EventArgs e)
         {
 
-           
-           
             try
             {
                 escucha.SetInputToDefaultAudioDevice();
@@ -143,8 +159,6 @@ namespace Capa_Presentacion
 
         private void button1_Click(object sender, EventArgs e)
         {
-
-
             DialogResult opcion;
             opcion = MessageBox.Show("Realmente desea Salir de la Aplicacion", "Salir del Programa", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (opcion == DialogResult.Yes)
@@ -205,9 +219,17 @@ namespace Capa_Presentacion
 
         }
 
+
+
         private void serialPort1_DataReceived(object sender, System.IO.Ports.SerialDataReceivedEventArgs e)
         {
-            MessageBox.Show(serialPort1.ReadLine());
+
+
+        }
+
+        private void Listo_Click(object sender, EventArgs e)
+        {
+            serialPort1.Write("1");
         }
     }
 

@@ -52,6 +52,7 @@
             this.serialPort1 = new System.IO.Ports.SerialPort(this.components);
             this.label1 = new System.Windows.Forms.Label();
             this.labelNombreUsuario = new System.Windows.Forms.Label();
+            this.Listo = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnParqueo
@@ -276,12 +277,23 @@
             this.labelNombreUsuario.Size = new System.Drawing.Size(0, 15);
             this.labelNombreUsuario.TabIndex = 23;
             // 
+            // Listo
+            // 
+            this.Listo.Location = new System.Drawing.Point(235, 12);
+            this.Listo.Name = "Listo";
+            this.Listo.Size = new System.Drawing.Size(123, 48);
+            this.Listo.TabIndex = 24;
+            this.Listo.Text = "Terminamos";
+            this.Listo.UseVisualStyleBackColor = true;
+            this.Listo.Click += new System.EventHandler(this.Listo_Click);
+            // 
             // Parqueo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightCyan;
             this.ClientSize = new System.Drawing.Size(1235, 586);
+            this.Controls.Add(this.Listo);
             this.Controls.Add(this.labelNombreUsuario);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.Motocicleta);
@@ -336,5 +348,6 @@
         public System.IO.Ports.SerialPort serialPort1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label labelNombreUsuario;
+        private System.Windows.Forms.Button Listo;
     }
 }
