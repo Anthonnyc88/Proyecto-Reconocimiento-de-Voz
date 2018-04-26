@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Speech.Recognition;
 
+
 namespace Capa_Presentacion
 {
     public partial class Parqueo : Form
@@ -25,9 +26,9 @@ namespace Capa_Presentacion
             //serialPort1.Open();
 
             //Puerto
-            serialPort1.PortName = "COM3";
-            serialPort1.BaudRate = 9600;
-            serialPort1.Open();
+           // serialPort1.PortName = "COM3";
+            //serialPort1.BaudRate = 9600;
+           // serialPort1.Open();
 
 
         }
@@ -70,7 +71,7 @@ namespace Capa_Presentacion
 
         }
 
-        bool activado = false;
+       
         private void btnParqueo_Click(object sender, EventArgs e)
         {
 

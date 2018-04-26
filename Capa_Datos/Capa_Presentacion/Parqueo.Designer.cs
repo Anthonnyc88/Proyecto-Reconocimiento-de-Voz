@@ -33,16 +33,10 @@
             this.btnParqueo = new System.Windows.Forms.Button();
             this.palabra = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.btnPrueba = new System.Windows.Forms.Button();
             this.Barrita = new System.Windows.Forms.ProgressBar();
             this.button1 = new System.Windows.Forms.Button();
             this.btnPalabras = new System.Windows.Forms.Button();
             this.Carrito2 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
             this.Carrito = new System.Windows.Forms.Button();
             this.txtPalabras = new System.Windows.Forms.TextBox();
             this.btnMoto = new System.Windows.Forms.Button();
@@ -53,6 +47,9 @@
             this.label1 = new System.Windows.Forms.Label();
             this.labelNombreUsuario = new System.Windows.Forms.Label();
             this.Listo = new System.Windows.Forms.Button();
+            this.progressBar1 = new System.Windows.Forms.ProgressBar();
+            this.progressBar2 = new System.Windows.Forms.ProgressBar();
+            this.label3 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btnParqueo
@@ -84,19 +81,6 @@
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(0, 15);
             this.label2.TabIndex = 4;
-            // 
-            // btnPrueba
-            // 
-            this.btnPrueba.BackColor = System.Drawing.Color.Silver;
-            this.btnPrueba.ForeColor = System.Drawing.Color.Yellow;
-            this.btnPrueba.Location = new System.Drawing.Point(5, 263);
-            this.btnPrueba.Margin = new System.Windows.Forms.Padding(4);
-            this.btnPrueba.Name = "btnPrueba";
-            this.btnPrueba.Size = new System.Drawing.Size(324, 130);
-            this.btnPrueba.TabIndex = 5;
-            this.btnPrueba.Text = "Parqueo 2";
-            this.btnPrueba.UseVisualStyleBackColor = false;
-            this.btnPrueba.Click += new System.EventHandler(this.btnPrueba_Click);
             // 
             // Barrita
             // 
@@ -139,66 +123,6 @@
             this.Carrito2.Size = new System.Drawing.Size(168, 70);
             this.Carrito2.TabIndex = 10;
             this.Carrito2.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.Silver;
-            this.button2.ForeColor = System.Drawing.Color.Yellow;
-            this.button2.Location = new System.Drawing.Point(5, 401);
-            this.button2.Margin = new System.Windows.Forms.Padding(4);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(324, 128);
-            this.button2.TabIndex = 11;
-            this.button2.Text = "Parqueo 1";
-            this.button2.UseVisualStyleBackColor = false;
-            // 
-            // button3
-            // 
-            this.button3.BackColor = System.Drawing.Color.Silver;
-            this.button3.ForeColor = System.Drawing.Color.Yellow;
-            this.button3.Location = new System.Drawing.Point(5, 123);
-            this.button3.Margin = new System.Windows.Forms.Padding(4);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(324, 132);
-            this.button3.TabIndex = 12;
-            this.button3.Text = "Parqueo 3";
-            this.button3.UseVisualStyleBackColor = false;
-            // 
-            // button4
-            // 
-            this.button4.BackColor = System.Drawing.Color.Silver;
-            this.button4.ForeColor = System.Drawing.Color.Yellow;
-            this.button4.Location = new System.Drawing.Point(882, 401);
-            this.button4.Margin = new System.Windows.Forms.Padding(4);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(324, 128);
-            this.button4.TabIndex = 13;
-            this.button4.Text = "Parqueo 4";
-            this.button4.UseVisualStyleBackColor = false;
-            // 
-            // button5
-            // 
-            this.button5.BackColor = System.Drawing.Color.Silver;
-            this.button5.ForeColor = System.Drawing.Color.Yellow;
-            this.button5.Location = new System.Drawing.Point(882, 263);
-            this.button5.Margin = new System.Windows.Forms.Padding(4);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(324, 130);
-            this.button5.TabIndex = 14;
-            this.button5.Text = "Parqueo 5";
-            this.button5.UseVisualStyleBackColor = false;
-            // 
-            // button6
-            // 
-            this.button6.BackColor = System.Drawing.Color.Silver;
-            this.button6.ForeColor = System.Drawing.Color.Yellow;
-            this.button6.Location = new System.Drawing.Point(882, 123);
-            this.button6.Margin = new System.Windows.Forms.Padding(4);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(324, 132);
-            this.button6.TabIndex = 15;
-            this.button6.Text = "Parqueo 6";
-            this.button6.UseVisualStyleBackColor = false;
             // 
             // Carrito
             // 
@@ -287,12 +211,38 @@
             this.Listo.UseVisualStyleBackColor = true;
             this.Listo.Click += new System.EventHandler(this.Listo_Click);
             // 
+            // progressBar1
+            // 
+            this.progressBar1.Location = new System.Drawing.Point(5, 390);
+            this.progressBar1.Name = "progressBar1";
+            this.progressBar1.Size = new System.Drawing.Size(235, 23);
+            this.progressBar1.TabIndex = 25;
+            // 
+            // progressBar2
+            // 
+            this.progressBar2.Location = new System.Drawing.Point(5, 172);
+            this.progressBar2.Name = "progressBar2";
+            this.progressBar2.Size = new System.Drawing.Size(235, 23);
+            this.progressBar2.TabIndex = 26;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(6, 293);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(61, 15);
+            this.label3.TabIndex = 27;
+            this.label3.Text = "Parqueo ";
+            // 
             // Parqueo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightCyan;
             this.ClientSize = new System.Drawing.Size(1235, 586);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.progressBar2);
+            this.Controls.Add(this.progressBar1);
             this.Controls.Add(this.Listo);
             this.Controls.Add(this.labelNombreUsuario);
             this.Controls.Add(this.label1);
@@ -302,16 +252,10 @@
             this.Controls.Add(this.btnMoto);
             this.Controls.Add(this.txtPalabras);
             this.Controls.Add(this.Carrito);
-            this.Controls.Add(this.button6);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
             this.Controls.Add(this.Carrito2);
             this.Controls.Add(this.btnPalabras);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.Barrita);
-            this.Controls.Add(this.btnPrueba);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.palabra);
             this.Controls.Add(this.btnParqueo);
@@ -329,16 +273,10 @@
         private System.Windows.Forms.Button btnParqueo;
         private System.Windows.Forms.Label palabra;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button btnPrueba;
         private System.Windows.Forms.ProgressBar Barrita;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button btnPalabras;
         private System.Windows.Forms.Button Carrito2;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button Carrito;
         private System.Windows.Forms.TextBox txtPalabras;
         private System.Windows.Forms.Button btnMoto;
@@ -349,5 +287,8 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label labelNombreUsuario;
         private System.Windows.Forms.Button Listo;
+        private System.Windows.Forms.ProgressBar progressBar1;
+        private System.Windows.Forms.ProgressBar progressBar2;
+        private System.Windows.Forms.Label label3;
     }
 }
